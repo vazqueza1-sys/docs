@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" aria-label="Budget Bandit">
+  <circle cx="40" cy="40" r="36" fill="#0a0a0b"></circle>
+  <circle cx="40" cy="40" r="32" fill="none" stroke="#d4b896" stroke-opacity="0.32" stroke-width="0.8" stroke-dasharray="1.8 1.8"></circle>
+  <path transform="translate(14 29) scale(0.52)" fill="#d4b896" fill-rule="evenodd" d="M12 4Q4 4 4 14L4 30Q4 40 14 40L38 40Q44 40 46 36L50 30L54 36Q56 40 62 40L86 40Q96 40 96 30L96 14Q96 4 88 4ZM22 22A6 7 0 1 0 34 22A6 7 0 1 0 22 22ZM66 22A6 7 0 1 0 78 22A6 7 0 1 0 66 22Z"></path>
+</svg>

@@ -1,0 +1,106 @@
+---
+title: "Import a CSV"
+description: "Add transactions to an account from a bank CSV: map columns, set the date format, and let duplicate detection skip rows you already have."
+---
+
+A CSV import adds transactions to one account you choose. Use it to bring history
+into an account that is not on a bank feed, or to top one up between syncs.
+
+<Warning>
+  A CSV import adds transactions to the account you select, inside your current
+  budget. It does **not** create a new budget and it does **not** overwrite your
+  existing budget. To migrate a whole budget from another app, use
+  <a href="/import/from-ynab">YNAB</a>, <a href="/import/from-monarch">Monarch</a>,
+  or <a href="/import/from-actual">Actual</a> instead.
+</Warning>
+
+## Import a file
+
+<Steps>
+  <Step title="Open the CSV importer">
+    Go to Import. Pick the **target account** for the transactions, then upload
+    your CSV file.
+  </Step>
+  <Step title="Map the columns">
+    Budget Bandit auto-detects which CSV column is the date, the amount, the
+    payee, and so on. Adjust any that are wrong using the **Map To** dropdowns.
+    Required: a **Date** column, and either an **Amount** column or an **Inflow**
+    plus **Outflow** pair.
+  </Step>
+  <Step title="Set the date format">
+    Leave it on **Auto-detect**, or pick the exact format your bank uses if dates
+    look wrong in the sample.
+  </Step>
+  <Step title="Preview and check duplicates">
+    Continue to the preview. Each row is checked against transactions you already
+    have in that account and tagged **new**, **duplicate**, or **likely
+    duplicate**.
+  </Step>
+  <Step title="Choose how to handle duplicates and import">
+    Pick **Skip duplicates** (recommended), **Skip only exact matches**, or
+    **Import everything**, then import. The result shows how many were imported
+    and how many were skipped.
+  </Step>
+</Steps>
+
+## Column mapping
+
+You map each CSV column to one of these fields:
+
+| Field | What it is |
+| --- | --- |
+| **Date** | Required. The transaction date. |
+| **Amount** | A single signed column (negative for spending). |
+| **Inflow** / **Outflow** | Use instead of Amount when your bank splits credits and debits into two columns. |
+| **Payee / Description** | The merchant or description. |
+| **Memo / Notes** | Extra notes. |
+| **Category** | A category name, if your file has one. |
+| **Reference ID** | A bank-supplied unique ID, used to match duplicates exactly. |
+| **Skip** | Ignore this column. |
+
+If your bank reports spending as positive numbers, tick **Invert amounts** to
+flip the signs. If you map only Inflow, all amounts come in positive; only
+Outflow, all negative.
+
+Full field-by-field reference: <a href="/import/csv-format">CSV format</a>.
+
+## Duplicate detection
+
+Budget Bandit compares each incoming row to what is already in the account:
+
+- **Exact match** — the same Reference ID, or an identical date, amount, and
+  payee.
+- **Likely duplicate** — a close match within a few days, even without a
+  reference ID.
+- **New** — no match found.
+
+**Skip duplicates** imports only new rows, which is the safe default when a file
+overlaps history you already have.
+
+## Save your mapping
+
+Tick **Remember this mapping for future imports to this account** and Budget
+Bandit reuses your column choices the next time you import a file with the same
+columns into the same account.
+
+## If rows do not come through
+
+Rows with an unreadable date or amount are skipped, and you are told how many.
+See <a href="/import/why-rows-didnt-import">Why rows did not import</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="CSV format reference" icon="list-check" href="/import/csv-format">
+    Exact columns, date formats, and amount handling.
+  </Card>
+  <Card title="OFX / QFX import" icon="file-code" href="/import/ofx-qfx">
+    A structured file that needs no column mapping.
+  </Card>
+  <Card title="Why rows did not import" icon="circle-question" href="/import/why-rows-didnt-import">
+    Skipped, dropped, or duplicate rows.
+  </Card>
+  <Card title="Connect a bank" icon="building-columns" href="/accounts/connect-a-bank">
+    Sync instead of importing files.
+  </Card>
+</CardGroup>

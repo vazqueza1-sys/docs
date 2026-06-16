@@ -1,0 +1,69 @@
+---
+title: "Manage rules"
+description: "Edit a rule, control which runs first with priority and stages, pause one without deleting it, or remove it."
+---
+
+The **Rules** page lists every rule you've made, with a summary of each rule's
+conditions and actions and a count of how many transactions it has touched.
+
+## Edit a rule
+
+Click a rule to open it, change its name, match mode, conditions, or actions, and
+save. The change applies to new transactions from then on. To re-run an edited
+rule over your history, see
+[Apply a rule retroactively](/rules/apply-retroactively).
+
+## Priority and order
+
+Rules run top to bottom, so order is priority — an earlier rule can set a
+category before a later one would. On top of order, every rule sits in one of
+three **stages** that run in sequence:
+
+| Stage | Runs | Use it for |
+| --- | --- | --- |
+| Pre | First | Setup work that later rules depend on |
+| Default | Middle | Most rules live here |
+| Post | Last | Cleanup after the main rules have run |
+
+Set a rule's stage when you create or edit it. Within a stage, the rules run in
+list order.
+
+<Tip>
+  If two rules would set conflicting categories, the one that runs first wins.
+  Put your most specific rules ahead of your broad catch-alls.
+</Tip>
+
+## Pause or enable a rule
+
+Each rule has an enable toggle. Pausing keeps the rule but stops it from running —
+useful when you want to step out of the way temporarily without losing the setup.
+A paused rule is also left out of [retroactive runs](/rules/apply-retroactively).
+
+## Delete a rule
+
+Open a rule's delete action and confirm. Deleting removes the rule but does not
+change any transactions it has already categorized.
+
+## If something looks wrong
+
+- The wrong rule is winning → reorder so the more specific rule runs first, or
+  move it to an earlier stage.
+- A rule stopped working → check that it's still enabled and its conditions still
+  match your current payees and amounts.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Create a rule" icon="wand-magic-sparkles" href="/rules/create-a-rule">
+    Conditions, actions, and match modes.
+  </Card>
+  <Card title="Apply retroactively" icon="clock-rotate-left" href="/rules/apply-retroactively">
+    Re-run rules over existing transactions.
+  </Card>
+  <Card title="Categorize" icon="tag" href="/transactions/categorize">
+    Set a category by hand when no rule fits.
+  </Card>
+  <Card title="Payees" icon="user-tag" href="/transactions/payees">
+    Default categories handle the simple cases.
+  </Card>
+</CardGroup>

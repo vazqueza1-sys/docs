@@ -1,0 +1,85 @@
+---
+title: "Cover overspending"
+description: "A negative category means you spent more than you assigned. Here is what red means and how to bring it back to zero."
+---
+
+When a category's Available goes below zero, you overspent it — you spent more than you
+assigned. Budget Bandit shows you the amount and where it came from, and covering it is
+one move.
+
+## What the colors mean
+
+The Available amount on a category is color-coded.
+
+| Color | Meaning |
+| --- | --- |
+| **Green** | Money left to spend in this category. |
+| **Gray** | Exactly zero — fully spent, nothing left. |
+| **Red** | Cash overspending. You spent cash you did not budget, and the money has already left your accounts. |
+| **Amber** | Credit overspending. You spent on a credit card without budgeting for it. No cash has left your accounts yet — the card's Payment category is now short by that amount. |
+
+<Note>
+  The split between red and amber matters. Red is money already gone. Amber is a debt
+  you took on by putting it on a card. Both need covering, but only red has already
+  hit your account balances.
+</Note>
+
+## Cover it by moving money in
+
+The fix for any overspent category is to move money into it from a category that came
+in under.
+
+<Steps>
+  <Step title="Click the red or amber Available amount">
+    A popover opens, pre-filled with the exact amount you are short.
+  </Step>
+  <Step title="Choose the category to pull from">
+    Pick a category with green Available you are willing to spend down.
+  </Step>
+  <Step title="Choose Move Money">
+    The overspent category returns to zero. The category you pulled from drops by the
+    same amount. Ready to Assign is untouched.
+  </Step>
+</Steps>
+
+You can also cover overspending by assigning more from Ready to Assign — type a larger
+number into the category's Assigned cell. Use this when you have idle cash rather than
+another category to raid.
+
+## Credit overspending is different
+
+If the overspending is amber, you spent on a credit card without budgeting for it.
+Covering it does two things at once: the category returns to zero, and the card's
+**Payment** category gains the same amount, because that spending is now backed by real
+money and safe to pay. Until you cover it, the card's Payment category stays short. See
+[The Payment category is red](/credit-cards/payment-category-is-red).
+
+## What happens if you leave it
+
+- **Cash overspending (red)** rolls forward. The negative carries into next month's
+  category until you cover it, so it keeps reminding you.
+- **Credit overspending (amber)** does not roll into next month's spending category.
+  Instead the claim stays on the card's Payment category as an underfunded gap, which
+  lasts until you budget for it or pay the card.
+
+<Warning>
+  Leaving overspending uncovered means your budget no longer adds up. A working budget
+  has no red categories at month's end — every dollar you spent was a dollar you had.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Assign and move money" icon="money-bill-transfer" href="/budgeting/assign-and-move-money">
+    The move-money tool in full.
+  </Card>
+  <Card title="Payment category is red" icon="credit-card" href="/credit-cards/payment-category-is-red">
+    Credit overspending and the safe-to-pay number.
+  </Card>
+  <Card title="How credit cards work" icon="circle-info" href="/concepts/how-credit-cards-work">
+    The funded-portion model behind the amber color.
+  </Card>
+  <Card title="Budgeting FAQ" icon="circle-question" href="/troubleshooting/budgeting">
+    Common budgeting questions answered.
+  </Card>
+</CardGroup>

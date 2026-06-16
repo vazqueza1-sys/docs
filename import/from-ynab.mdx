@@ -1,0 +1,91 @@
+---
+title: "Import from YNAB"
+description: "Move your full YNAB budget — accounts, categories, transactions, and monthly assignments — into a new Budget Bandit budget."
+---
+
+The YNAB importer reads your YNAB export and rebuilds it as a new budget in
+Budget Bandit: accounts, category groups and categories, transactions, and the
+amounts you assigned each month.
+
+<Warning>
+  This import creates a **brand-new budget**. It never overwrites or merges into
+  a budget you already have. After it finishes you can switch between budgets;
+  nothing existing is touched.
+</Warning>
+
+## Export from YNAB
+
+<Steps>
+  <Step title="Open YNAB settings">
+    In YNAB, open Settings (the gear icon).
+  </Step>
+  <Step title="Export the budget">
+    Choose **Export Budget**.
+  </Step>
+  <Step title="Download the file">
+    YNAB gives you a `.zip` file. Save it where you can find it. The zip contains
+    a Register CSV (your transactions) and a Plan CSV (your monthly
+    assignments).
+  </Step>
+</Steps>
+
+## Import into Budget Bandit
+
+<Steps>
+  <Step title="Open the YNAB importer">
+    Go to Import, then **Import from YNAB**.
+  </Step>
+  <Step title="Upload the .zip">
+    Drag the `.zip` onto the drop zone, or click to browse. Budget Bandit reads
+    the files in your browser.
+  </Step>
+  <Step title="Review the preview">
+    You see counts for accounts, categories, transactions, and budget entries.
+    Confirm the budget name, which is taken from your YNAB export.
+  </Step>
+  <Step title="Import everything">
+    Choose **Import Everything**. Budget Bandit creates the new budget, switches
+    to it, and loads your data.
+  </Step>
+</Steps>
+
+## What comes across
+
+- **Accounts** — every account that appears in your register.
+- **Category groups and categories** — YNAB's structure, minus internal groups
+  (the hidden "Internal Master Category" and "Hidden Categories" groups are not
+  brought over). The **Inflow** group is treated as income.
+- **Transactions** — with payee, memo, and cleared status. Transfers between
+  accounts are recognized and linked rather than double-counted, and YNAB's
+  "Starting Balance" rows are handled as account starting balances.
+- **Monthly assignments** — the amounts you budgeted per category per month, from
+  the Plan CSV, so your history of assignments comes with you.
+
+<Note>
+  If the export is missing its Register CSV, Budget Bandit cannot read it. Make
+  sure you uploaded the full `.zip` straight from YNAB rather than a single
+  extracted file.
+</Note>
+
+## After importing
+
+Your transactions are in the new budget. Open <a href="/budgeting/assign-and-move-money">the budget</a> to
+see assignments, and review categorization in
+<a href="/transactions/to-review">To Review</a>. Set up
+<a href="/rules/create-a-rule">rules</a> to keep future transactions tidy.
+
+## If something looks off
+
+See <a href="/import/why-rows-didnt-import">Why rows did not import</a> for skipped
+rows, or <a href="/troubleshooting/imports">import troubleshooting</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Import overview" icon="arrow-right-arrow-left" href="/import/overview">
+    All five importers and the new-budget rule.
+  </Card>
+  <Card title="How credit cards work" icon="credit-card" href="/concepts/how-credit-cards-work">
+    Card handling differs from YNAB — read this next.
+  </Card>
+</CardGroup>

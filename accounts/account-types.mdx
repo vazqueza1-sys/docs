@@ -1,0 +1,75 @@
+---
+title: "Account types"
+description: "The seven account types in Budget Bandit and when to use each one."
+---
+
+Every account has a type. The type sets two things: whether the account is
+included in your budget by default, and how it is treated in reports such as net
+worth and debt payoff. You can change an account's type later from
+<a href="/accounts/edit-close-delete">Edit account</a>.
+
+## The seven types
+
+| Type | Use it for | On budget by default |
+| --- | --- | --- |
+| **Checking** | Your everyday spending account | Yes |
+| **Savings** | Money set aside for goals | Yes |
+| **Credit Card** | A card you carry and pay off | Yes |
+| **Cash** | Physical cash on hand | Yes |
+| **Loan** | Mortgage, auto, student, or personal loans | No (tracking) |
+| **Investment** | Brokerage, 401k, IRA accounts | No (tracking) |
+| **Other** | Anything else | Yes |
+
+## On-budget vs tracking accounts
+
+**On-budget** accounts hold the money you assign in your budget. Spending from
+them draws down category balances. Checking, savings, cash, and credit cards are
+on budget by default.
+
+**Tracking** accounts hold value you are not budgeting day to day — a loan
+balance or an investment account. They count toward your
+<a href="/reports/net-worth">net worth</a> but do not pull from your category
+balances. Loans and investments default to tracking.
+
+You control this per account with the **Include in budget** checkbox, regardless
+of type.
+
+## Credit cards are special
+
+A credit card is on budget and uses the funded-portion model. When you assign
+money to a spending category and then spend on the card, that money moves to the
+card's **Payment** category so it is safe to pay. Read
+<a href="/concepts/how-credit-cards-work">How credit cards work</a> before you
+set one up.
+
+<Note>
+  For credit cards and loans, a balance you owe is stored as a **negative**
+  number. When you create the account, enter what you owe as a positive figure —
+  Budget Bandit flips the sign for you.
+</Note>
+
+## Picking the right type
+
+- Money you spend from directly, day to day: **Checking** or **Cash**.
+- Money parked for later: **Savings**.
+- A card you swipe and repay: **Credit Card**.
+- A debt with a fixed balance you pay down: **Loan**.
+- Holdings whose value you want in net worth but not your budget: **Investment**.
+- None of the above: **Other**.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Add a manual account" icon="pen" href="/accounts/manual-accounts">
+    Create an account by hand with a starting balance.
+  </Card>
+  <Card title="How credit cards work" icon="credit-card" href="/concepts/how-credit-cards-work">
+    The funded-portion model in plain terms.
+  </Card>
+  <Card title="Net worth report" icon="chart-line" href="/reports/net-worth">
+    How assets and liabilities are totaled.
+  </Card>
+  <Card title="Edit or close an account" icon="pen-to-square" href="/accounts/edit-close-delete">
+    Change a type, close, or delete.
+  </Card>
+</CardGroup>

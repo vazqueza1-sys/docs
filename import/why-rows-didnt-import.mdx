@@ -1,0 +1,87 @@
+---
+title: "Why rows did not import"
+description: "Troubleshoot skipped, dropped, or duplicate rows when importing a CSV or OFX/QFX file."
+---
+
+When an import brings in fewer rows than you expected, the count is almost always
+explained by one of the causes below. The import summary tells you how many were
+imported, skipped as duplicates, and how many had errors — start there.
+
+## Rows skipped as duplicates
+
+This is the most common reason a count is lower than the file's row count, and it
+is usually correct.
+
+- You chose **Skip duplicates** and some rows matched transactions already in the
+  account.
+- You imported an overlapping file twice, or the account is also on a bank feed.
+
+**What to do:** if you genuinely want every row, re-run with **Import
+everything**. If you expected fewer, the skip is working as intended. More on
+mixing sources: <a href="/accounts/duplicate-or-missing-transactions">Duplicate or missing transactions</a>.
+
+## Rows skipped for a bad date
+
+If a row's date cannot be read with the selected format, it is skipped and
+counted in the "skipped" total.
+
+**What to do:** go back to the mapping step and set the exact
+<a href="/import/csv-format">date format</a> your bank uses instead of
+auto-detect. Ambiguous dates like `03/04/2026` need an explicit format so day and
+month are not swapped.
+
+## Rows skipped for a bad amount
+
+A row with no readable amount — empty, text, or an unrecognized format — is
+skipped.
+
+**What to do:** confirm you mapped the **Amount** column, or both **Inflow** and
+**Outflow**. If your bank uses two columns for credits and debits, map both. See
+<a href="/import/csv-format">CSV format</a>.
+
+## Every amount has the wrong sign
+
+If spending shows as positive (or income as negative) after import, the file's
+sign convention is reversed from Budget Bandit's.
+
+**What to do:** re-import and tick **Invert amounts** on the mapping step.
+
+## "No valid transactions found"
+
+Either the date or amount column was not mapped, or no row had both a readable
+date and amount.
+
+**What to do:** check the mapping. You need a **Date** column and either
+**Amount** or **Inflow** plus **Outflow**.
+
+## "Not an OFX file" or a parse error
+
+The file is not the format the importer expects.
+
+**What to do:** make sure you downloaded the OFX/QFX or CSV option from your bank,
+not a PDF or a spreadsheet-edited copy. Do not open and re-save a bank CSV in a
+spreadsheet before importing — that can change the formatting.
+
+## The whole file failed
+
+If nothing imported and you saw an error rather than a summary, the file may be
+corrupt or truncated. Re-download it from your bank and try again.
+
+## Still stuck?
+
+See <a href="/troubleshooting/imports">import troubleshooting</a> or
+<a href="/troubleshooting/contact-support">contact support</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="CSV format" icon="list-check" href="/import/csv-format">
+    Columns, dates, and amounts the importer expects.
+  </Card>
+  <Card title="Import a CSV" icon="table" href="/import/csv">
+    Re-run the import with the right settings.
+  </Card>
+  <Card title="Duplicate or missing transactions" icon="clone" href="/accounts/duplicate-or-missing-transactions">
+    When the issue is doubles, not drops.
+  </Card>
+</CardGroup>

@@ -1,97 +1,224 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "theme": "mint",
+  "name": "Budget Bandit",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#7a5a3a",
+    "light": "#d4b896",
+    "dark": "#6b4f33"
   },
-  "favicon": "/favicon.ico",
-  "icons": {
-    "library": "lucide"
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/seal.svg",
+    "dark": "/logo/seal-inverted.svg",
+    "href": "https://budgetbandit.app"
   },
-  "styling": {
-    "eyebrows": "breadcrumbs"
+  "fonts": {
+    "heading": {
+      "family": "Fraunces"
+    },
+    "body": {
+      "family": "Inter"
+    }
   },
-  "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  "background": {
+    "color": {
+      "light": "#f6f5f3",
+      "dark": "#0a0a0b"
+    }
   },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Home",
-          "icon": "house",
-          "href": "/"
-        },
-        {
-          "anchor": "Changelog",
-          "icon": "scroll-text",
-          "href": "https://www.mintlify.com/docs/changelog"
-        },
-        {
-          "anchor": "Help",
-          "icon": "life-buoy",
-          "href": "https://www.mintlify.com/docs/contact-support"
-        }
-      ]
-    },
-    "directory": "card",
     "groups": [
       {
-        "group": "Platform",
-        "icon": "layers",
-        "expanded": true,
+        "group": "Getting started",
+        "icon": "rocket",
         "pages": [
-          "platform/quickstart",
-          "platform/key-concepts",
-          "platform/configuration/settings",
-          "platform/configuration/user-management",
-          "platform/administration/roles-permissions"
+          "index",
+          "quickstart",
+          "getting-started/create-your-budget",
+          "getting-started/assign-your-first-dollars",
+          "getting-started/first-week",
+          "getting-started/install-the-mobile-app"
         ]
       },
       {
-        "group": "Analytics",
-        "icon": "chart-bar",
-        "expanded": true,
+        "group": "Core concepts",
+        "icon": "lightbulb",
         "pages": [
-          "analytics/quickstart",
-          "analytics/connect-data",
-          "analytics/dashboards/create-dashboard",
-          "analytics/reports/scheduled-reports"
+          "concepts/zero-based-budgeting",
+          "concepts/ready-to-assign",
+          "concepts/categories-and-groups",
+          "concepts/how-credit-cards-work",
+          "concepts/rolling-money-forward",
+          "concepts/envelope-vs-flex",
+          "concepts/sync-and-privacy",
+          "concepts/how-money-is-stored"
         ]
       },
       {
-        "group": "Integrations",
-        "icon": "plug",
-        "expanded": true,
+        "group": "Accounts & bank sync",
+        "icon": "building-columns",
         "pages": [
-          "integrations/quickstart",
-          "integrations/authentication",
-          "integrations/connectors/crm",
-          "integrations/webhooks/configure"
+          "accounts/connect-a-bank",
+          "accounts/supported-banks",
+          "accounts/manual-accounts",
+          "accounts/account-types",
+          "accounts/edit-close-delete",
+          "accounts/reconnect-a-bank",
+          "accounts/fix-sync-problems",
+          "accounts/duplicate-or-missing-transactions",
+          "accounts/pending-vs-posted"
+        ]
+      },
+      {
+        "group": "Import & migrate",
+        "icon": "arrow-right-arrow-left",
+        "pages": [
+          "import/overview",
+          "import/from-ynab",
+          "import/from-monarch",
+          "import/from-actual",
+          "import/csv",
+          "import/ofx-qfx",
+          "import/csv-format",
+          "import/why-rows-didnt-import"
+        ]
+      },
+      {
+        "group": "Transactions",
+        "icon": "receipt",
+        "pages": [
+          "transactions/add-edit-delete",
+          "transactions/categorize",
+          "transactions/splits",
+          "transactions/transfers",
+          "transactions/flags-search-filter",
+          "transactions/bulk-actions",
+          "transactions/payees",
+          "transactions/tags",
+          "transactions/to-review"
+        ]
+      },
+      {
+        "group": "Rules",
+        "icon": "wand-magic-sparkles",
+        "pages": [
+          "rules/create-a-rule",
+          "rules/apply-retroactively",
+          "rules/manage-rules"
+        ]
+      },
+      {
+        "group": "Scheduled transactions",
+        "icon": "calendar-days",
+        "pages": [
+          "scheduled/create-a-schedule",
+          "scheduled/edit-or-skip"
+        ]
+      },
+      {
+        "group": "Budgeting & targets",
+        "icon": "circle-dollar-to-slot",
+        "pages": [
+          "budgeting/assign-and-move-money",
+          "budgeting/cover-overspending",
+          "budgeting/set-a-target",
+          "budgeting/manage-targets",
+          "budgeting/auto-assign",
+          "budgeting/organize-categories",
+          "budgeting/irregular-income"
+        ]
+      },
+      {
+        "group": "Credit cards & debt",
+        "icon": "credit-card",
+        "pages": [
+          "credit-cards/set-up-a-card",
+          "credit-cards/pay-your-card",
+          "credit-cards/payment-category-is-red",
+          "credit-cards/refunds-and-credits",
+          "credit-cards/debt-payoff"
+        ]
+      },
+      {
+        "group": "Reconciling",
+        "icon": "scale-balanced",
+        "pages": [
+          "reconciling/reconcile-an-account",
+          "reconciling/balance-doesnt-match"
+        ]
+      },
+      {
+        "group": "Reports",
+        "icon": "chart-line",
+        "pages": [
+          "reports/overview",
+          "reports/spending",
+          "reports/income-and-cash-flow",
+          "reports/net-worth",
+          "reports/forecast-and-debt",
+          "reports/budget-vs-actual",
+          "reports/filtering"
+        ]
+      },
+      {
+        "group": "Sharing & household",
+        "icon": "users",
+        "pages": [
+          "sharing/invite-a-partner",
+          "sharing/roles-and-permissions",
+          "sharing/manage-members"
+        ]
+      },
+      {
+        "group": "Mobile app",
+        "icon": "mobile-screen-button",
+        "pages": [
+          "mobile/overview",
+          "mobile/face-id-and-app-lock",
+          "mobile/add-on-the-go",
+          "mobile/offline"
+        ]
+      },
+      {
+        "group": "Account & billing",
+        "icon": "gear",
+        "pages": [
+          "account/plans-and-pricing",
+          "account/manage-subscription",
+          "account/payment-method-and-receipts",
+          "account/change-email-or-password",
+          "account/two-factor-authentication",
+          "account/export-your-data",
+          "account/delete-your-account",
+          "account/privacy-mode",
+          "account/keyboard-shortcuts"
+        ]
+      },
+      {
+        "group": "Troubleshooting & FAQ",
+        "icon": "life-ring",
+        "pages": [
+          "troubleshooting/faq",
+          "troubleshooting/bank-sync",
+          "troubleshooting/imports",
+          "troubleshooting/budgeting",
+          "troubleshooting/contact-support"
         ]
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
-    "links": [],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open the app",
+      "href": "https://budgetbandit.app"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
+      "x": "https://x.com/budgetbandit",
+      "website": "https://budgetbandit.app"
     }
   }
 }

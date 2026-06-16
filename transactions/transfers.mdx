@@ -1,0 +1,73 @@
+---
+title: "Transfer money between accounts"
+description: "Record money moving between two of your own accounts as a single transfer with two linked legs."
+---
+
+A transfer moves money between two accounts you own — checking to savings, or
+cash to a credit card payment. It isn't income and it isn't spending, so a
+transfer has no category and never touches Ready to Assign. Budget Bandit records
+it as two linked legs: an outflow from the source account and a matching inflow
+into the destination account.
+
+## Record a transfer
+
+<Tabs>
+  <Tab title="Transfer dialog">
+    Press <kbd>t</kbd> from anywhere to open the transfer dialog. Choose the
+    **From** account, the **To** account, the amount, and a date. Add a memo if
+    you want, then choose **Transfer**. Both accounts update at once.
+  </Tab>
+  <Tab title="In the register">
+    Add a transaction and, in the payee field, pick another one of your accounts
+    instead of a payee. The entry becomes a transfer to that account. The
+    category field disappears, because transfers aren't categorized.
+  </Tab>
+</Tabs>
+
+<Tip>
+  Paying a credit card? In the transfer dialog, when the destination is a credit
+  card with a balance owed, you'll see the amount owed offered as a one-click
+  fill so you can pay the statement to the cent. See
+  [Pay your card](/credit-cards/pay-your-card).
+</Tip>
+
+## How the two legs behave
+
+- The source account shows an outflow; the destination shows an inflow of the
+  same amount. Each leg names the other account in place of a payee
+  ("Transfer: Savings").
+- The two legs stay linked. Editing or deleting one side affects the pair —
+  deleting a transfer removes both legs together.
+- Transfers don't change Ready to Assign or any category's available amount. The
+  money is still yours; it just lives in a different account.
+
+## Credit card payments are transfers
+
+Moving money from a checking account to a credit card is a transfer. It pays
+down the card's balance and, on the budget side, draws from the card's
+**Payment** category. The way that Payment money builds up as you spend is
+covered in [How credit cards work](/concepts/how-credit-cards-work).
+
+## If something looks wrong
+
+- You see the money twice → a transfer should appear once on each account, not
+  twice on one. Check [Duplicate or missing transactions](/accounts/duplicate-or-missing-transactions).
+- A bank import shows both sides separately → the review queue can link them.
+  See [To Review](/transactions/to-review).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Pay your card" icon="credit-card" href="/credit-cards/pay-your-card">
+    Record a credit card payment as a transfer.
+  </Card>
+  <Card title="Add a transaction" icon="plus" href="/transactions/add-edit-delete">
+    Enter a normal transaction by hand.
+  </Card>
+  <Card title="To Review" icon="inbox" href="/transactions/to-review">
+    Link a bank-imported pair as a transfer.
+  </Card>
+  <Card title="How credit cards work" icon="circle-info" href="/concepts/how-credit-cards-work">
+    The funded-portion model behind card payments.
+  </Card>
+</CardGroup>

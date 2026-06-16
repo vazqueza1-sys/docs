@@ -1,0 +1,81 @@
+---
+title: "Import from Monarch"
+description: "Bring your Monarch Money accounts, categories, and transactions into a new Budget Bandit budget using two CSV exports."
+---
+
+The Monarch importer takes two CSV files from Monarch Money — your transactions
+and your account balances — and builds a new budget from them.
+
+<Warning>
+  This import creates a **brand-new budget**. It never overwrites or merges into
+  a budget you already have.
+</Warning>
+
+## Export from Monarch
+
+In Monarch, go to **Settings, then Data**, and download both files:
+
+- **Transactions** — your transaction history.
+- **Account balances** — your accounts and their current balances.
+
+Save both CSV files where you can find them. You need both.
+
+## Import into Budget Bandit
+
+<Steps>
+  <Step title="Open the Monarch importer">
+    Go to Import, then **Import from Monarch Money**.
+  </Step>
+  <Step title="Upload the transactions CSV">
+    Select **Upload Transactions CSV** and choose the transactions file.
+  </Step>
+  <Step title="Upload the account balances CSV">
+    Select **Upload Account Balances CSV** and choose the balances file. Both
+    files are parsed in your browser — nothing is sent until you import.
+  </Step>
+  <Step title="Review the preview">
+    You see counts for accounts, categories, and transactions.
+  </Step>
+  <Step title="Import everything">
+    Choose **Import Everything**. Budget Bandit creates the new budget and loads
+    your data.
+  </Step>
+</Steps>
+
+## What comes across
+
+- **Accounts** — taken from the balances file, with the most recent balance for
+  each. Accounts that appear only in your transactions are created too, starting
+  at a zero balance.
+- **Categories** — every category used in your transactions.
+- **Transactions** — with merchant, category, account, the original bank
+  statement text, notes, and tags where present.
+
+<Note>
+  Monarch does not export the way you assigned money each month, so the new
+  budget arrives with your transactions and structure but without prior monthly
+  assignments. You assign going forward from <a href="/budgeting/assign-and-move-money">the budget</a>.
+</Note>
+
+## After importing
+
+Review categorization in <a href="/transactions/to-review">To Review</a> and start
+assigning on <a href="/budgeting/assign-and-move-money">the budget</a>. <a href="/rules/create-a-rule">Rules</a>
+keep future transactions categorized automatically.
+
+## If something looks off
+
+If a CSV will not parse, confirm you downloaded the file straight from Monarch
+without editing it in a spreadsheet first. See
+<a href="/import/why-rows-didnt-import">Why rows did not import</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Import overview" icon="arrow-right-arrow-left" href="/import/overview">
+    All five importers and the new-budget rule.
+  </Card>
+  <Card title="Set a target" icon="bullseye" href="/budgeting/set-a-target">
+    Recreate your goals after the move.
+  </Card>
+</CardGroup>

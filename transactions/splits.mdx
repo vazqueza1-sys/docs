@@ -1,0 +1,90 @@
+---
+title: "Split a transaction"
+description: "When one transaction covers more than one category, split it so each category gets the right share."
+---
+
+A split transaction divides one transaction across two or more categories. The
+classic case is a single store run that covers groceries and household supplies:
+one $80 charge, $60 to Groceries and $20 to Household. The account still sees one
+$80 outflow, but the budget counts each piece against its own category.
+
+## How splits work
+
+When a transaction is split:
+
+- The split amounts must add up to the transaction's total. An $80 transaction
+  splits into pieces that sum to exactly $80.
+- The parent transaction itself carries no single category — each split line
+  carries its own category instead.
+- Every split piece draws down the category you assign it to, just like a normal
+  categorized transaction.
+
+## Split automatically with a rule
+
+The in-app way to split is a rule that uses the Auto-Split action. You give it a
+set of categories with a percentage for each, and every matching transaction is
+divided that way on its own. The $60 Groceries and $20 Household example above is a
+75 percent and 25 percent split.
+
+<Steps>
+  <Step title="Create a rule">
+    Open Rules and add a rule that matches the transactions you want to split — for
+    example, payee contains a warehouse store. See
+    [Create a rule](/rules/create-a-rule).
+  </Step>
+  <Step title="Add the Auto-Split action">
+    Choose Auto-Split, then add one line per category and set the percentage each
+    should take. The percentages cover the whole transaction.
+  </Step>
+  <Step title="Apply it">
+    New matching transactions split on their own. To split transactions you already
+    have, run the rule over them — see
+    [Apply a rule to existing transactions](/rules/apply-retroactively).
+  </Step>
+</Steps>
+
+<Note>
+  A one-off charge you do not want a standing rule for can be entered as separate
+  transactions instead — a $60 Groceries entry and a $20 Household entry on the same
+  date and account. Together they match the real charge, and each lands in the right
+  category.
+</Note>
+
+## Splits from imports
+
+Splits also arrive through imports. When you migrate from another app, split
+transactions come across with their pieces intact:
+
+- [Import from YNAB](/import/from-ynab)
+- [Import from Actual](/import/from-actual)
+- [Import from Monarch](/import/from-monarch)
+
+<Warning>
+  Every import creates a brand-new budget. It never overwrites or merges into an
+  existing one — so importing to bring split transactions in is a fresh-start move,
+  not a way to add splits to your current budget.
+</Warning>
+
+## If something looks wrong
+
+- Split pieces don't add up to the total → the transaction can't save until they
+  match the full amount.
+- An imported split landed in the wrong categories → recategorize each piece, or
+  see [Categorize a transaction](/transactions/categorize).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Categorize a transaction" icon="tag" href="/transactions/categorize">
+    Assign a single category to a transaction.
+  </Card>
+  <Card title="Import from YNAB" icon="file-import" href="/import/from-ynab">
+    Bring split transactions over from YNAB.
+  </Card>
+  <Card title="Add a transaction" icon="plus" href="/transactions/add-edit-delete">
+    Enter transactions by hand.
+  </Card>
+  <Card title="Contact support" icon="life-ring" href="/troubleshooting/contact-support">
+    Get help with a specific transaction.
+  </Card>
+</CardGroup>

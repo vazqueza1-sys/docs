@@ -1,0 +1,77 @@
+---
+title: "Payees"
+description: "Manage who you pay: rename, set a default category, merge duplicates, and delete payees."
+---
+
+A payee is who a transaction was with — a store, an employer, a person. Budget
+Bandit creates payees for you as you enter transactions, so you rarely add one by
+hand. The Payees page is where you tidy them up.
+
+## Where payees come from
+
+You don't create payees manually. The first time you type a new name on a
+transaction, that payee is created and reused from then on. Over time you build a
+list you can clean and organize on the **Payees** page.
+
+## Rename a payee
+
+On the Payees page, open a payee's actions and choose **Edit**, then change the
+name and save. The new name applies everywhere that payee appears.
+
+## Give a payee a default category
+
+A payee can carry a **default category** so the next transaction from that payee
+starts out categorized. Payees also have a **category learning** toggle: when it's
+on, the payee adapts to how you categorize its transactions. Turn learning off to
+keep a fixed default.
+
+This is the lightest-weight way to auto-categorize. For conditions beyond the
+payee name, use a [rule](/rules/create-a-rule) instead.
+
+## Merge duplicate payees
+
+Imports and typos leave you with near-duplicates like "Amazon," "AMZN," and
+"Amazon.com." Merge them into one:
+
+<Steps>
+  <Step title="Select the duplicates">
+    On the Payees page, check two or more payees that are really the same.
+  </Step>
+  <Step title="Open Merge">
+    Choose **Merge** (it appears once two or more are selected).
+  </Step>
+  <Step title="Pick the name to keep">
+    Select which payee name survives. Every transaction from the others is
+    reassigned to it, and the rest are deleted.
+  </Step>
+</Steps>
+
+## Delete a payee
+
+Open a payee's actions and choose **Delete**. The payee is removed and any
+transaction that referenced it has its payee cleared — the transactions
+themselves stay.
+
+## If something looks wrong
+
+- Two versions of the same store keep appearing → merge them, then set up a
+  [rule](/rules/create-a-rule) so future imports land on the right name.
+- A payee's transactions aren't auto-categorizing → check its default category
+  and category-learning setting.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Categorize" icon="tag" href="/transactions/categorize">
+    Assign categories to a payee's transactions.
+  </Card>
+  <Card title="Create a rule" icon="wand-magic-sparkles" href="/rules/create-a-rule">
+    Match on payee and apply a category, tag, or flag.
+  </Card>
+  <Card title="Tags" icon="tags" href="/transactions/tags">
+    Cross-cutting labels, separate from payees.
+  </Card>
+  <Card title="Import overview" icon="file-import" href="/import/overview">
+    Where many duplicate payees come from.
+  </Card>
+</CardGroup>

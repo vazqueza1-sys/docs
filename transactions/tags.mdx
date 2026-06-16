@@ -1,0 +1,78 @@
+---
+title: "Tags"
+description: "Create custom tags and apply several to a single transaction to track things that cut across categories."
+---
+
+Tags are cross-cutting labels. Unlike a category — where a transaction has one —
+you can put many tags on a single transaction. Use them for things that span
+categories: a vacation, a project, a reimbursable expense, a tax write-off.
+
+## Create a tag
+
+Open the **Tags** page and type a name in the create field — for example
+"Vacation 2026" or "Reimbursable" — then add it. A tag name can be up to 60
+characters. You can give it one of eight colors, or leave it uncolored.
+
+## Apply tags to a transaction
+
+- **One transaction:** open the transaction and use its tag picker to add or
+  remove tags. You can create a new tag inline while you're there.
+- **Many at once:** select transactions and use [bulk actions](/transactions/bulk-actions)
+  → **Tags**, then **Add** or **Remove**.
+- **Automatically:** a [rule](/rules/create-a-rule) can add tags to transactions
+  that match its conditions.
+
+## Filter by tag
+
+The Transactions [filter bar](/transactions/flags-search-filter) has a tag
+filter. Pick one or more tags to show transactions that carry **any** of them.
+This is how you total up a trip or a project: tag the transactions, then filter
+to the tag.
+
+## Rename, recolor, or delete a tag
+
+On the Tags page:
+
+- **Rename** — click the tag name, edit it, and save. The change applies
+  everywhere the tag is used.
+- **Recolor** — pick a color swatch (or none).
+- **Delete** — removes the tag from every transaction it's on. This can't be
+  undone.
+
+## Merge tags
+
+Built up duplicates like "Vacation" and "Vacation 2026"? Select two or more tags
+and choose **Merge** to combine them into one, keeping every transaction's
+labeling intact.
+
+## Tags vs categories vs flags
+
+- **Category** — the one envelope a transaction's money comes from. Every
+  budgeted transaction has exactly one.
+- **Tag** — a free-form label; a transaction can have several.
+- **Flag** — a single color marker for quick visual sorting. See
+  [Flags, search, and filters](/transactions/flags-search-filter).
+
+## If something looks wrong
+
+- A tag total looks off → confirm every transaction you meant to include carries
+  the tag, then filter by it.
+- A tag you deleted is gone from transactions → that's expected; deleting a tag
+  removes it everywhere.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Flags, search, and filters" icon="flag" href="/transactions/flags-search-filter">
+    Flag, find, and filter — including by tag.
+  </Card>
+  <Card title="Bulk actions" icon="layer-group" href="/transactions/bulk-actions">
+    Add or remove tags across many transactions.
+  </Card>
+  <Card title="Create a rule" icon="wand-magic-sparkles" href="/rules/create-a-rule">
+    Add tags automatically by condition.
+  </Card>
+  <Card title="Categorize" icon="tag" href="/transactions/categorize">
+    The one-category-per-transaction side of the story.
+  </Card>
+</CardGroup>

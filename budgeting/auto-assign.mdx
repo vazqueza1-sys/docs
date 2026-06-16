@@ -1,0 +1,80 @@
+---
+title: "Auto-assign"
+description: "Fill underfunded categories in one move. Three strategies: fund your goals, repeat last month, or match your average spending."
+---
+
+Auto-assign distributes your Ready to Assign money across categories in a single move,
+so you do not have to type each cell. It always shows a preview first — nothing is
+assigned until you confirm.
+
+## The three strategies
+
+Open the Auto-Assign menu on the Budget page and choose one:
+
+<AccordionGroup>
+  <Accordion title="Fund My Goals (recommended)">
+    Fills every category that has a target up to what that target asks for this month.
+    Categories are funded earliest due dates first, then by priority, so time-sensitive
+    targets get money before the rest. Leftover money flows to any categories you have
+    marked as remainder categories.
+  </Accordion>
+  <Accordion title="Same as Last Month">
+    Repeats last month's assigned amounts. The quickest way to keep a steady budget
+    consistent month to month.
+  </Accordion>
+  <Accordion title="Based on Spending">
+    Sets each category to your three-month average spending. Useful for variable
+    expenses like groceries or gas, where a fixed target is harder to pin down.
+  </Accordion>
+</AccordionGroup>
+
+## How to run it
+
+<Steps>
+  <Step title="Open the Auto-Assign menu on the Budget page">
+    You will see the three strategies with a short description of each.
+  </Step>
+  <Step title="Choose a strategy">
+    Budget Bandit computes what it would assign and opens a preview.
+  </Step>
+  <Step title="Review the preview">
+    Each row shows the category, what it currently holds, what would be added, the new
+    total, and the reason. The header shows your available money and the total this run
+    would assign.
+  </Step>
+  <Step title="Uncheck any rows you do not want">
+    Toggle off individual categories to leave them out of this run.
+  </Step>
+  <Step title="Choose Apply">
+    The selected amounts are assigned at once and Ready to Assign drops by the total.
+  </Step>
+</Steps>
+
+<Note>
+  Auto-assign only proposes amounts up to the money you have. If a strategy would assign
+  more than your Ready to Assign balance, you will not be able to send Ready to Assign
+  below zero — review the preview and uncheck lower-priority categories.
+</Note>
+
+## Snoozed and funded categories
+
+If every target is already funded, Auto-assign tells you there is nothing to assign.
+Targets you have [snoozed](/budgeting/manage-targets) are skipped — Auto-assign will not
+try to fill a target you have deliberately paused.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Set a target" icon="bullseye" href="/budgeting/set-a-target">
+    Targets are what "Fund My Goals" fills.
+  </Card>
+  <Card title="Assign and move money" icon="money-bill-transfer" href="/budgeting/assign-and-move-money">
+    Assign by hand when you want full control.
+  </Card>
+  <Card title="Manage targets" icon="pen-to-square" href="/budgeting/manage-targets">
+    Snooze a target to skip it in auto-fill.
+  </Card>
+  <Card title="Irregular income" icon="wave-square" href="/budgeting/irregular-income">
+    Auto-assign when income varies.
+  </Card>
+</CardGroup>

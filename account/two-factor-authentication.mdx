@@ -1,0 +1,81 @@
+---
+title: "Two-factor authentication"
+description: "Add a one-time code to every sign-in with an authenticator app, save recovery codes, and handle step-up on sensitive actions."
+---
+
+Two-factor authentication (2FA) adds a one-time code to every sign-in. Even if someone has
+your password, they cannot get in without the code from your phone. Budget Bandit uses TOTP
+codes from a standard authenticator app.
+
+## Enroll
+
+You need an authenticator app such as Google Authenticator, 1Password, Authy, or Bitwarden.
+
+<Steps>
+  <Step title="Open Settings, then Security">
+    Find the two-factor authentication section and start the setup.
+  </Step>
+  <Step title="Scan the QR code">
+    Open your authenticator app and scan the QR code shown. If you cannot scan, copy the
+    setup key shown beneath it and enter it manually.
+  </Step>
+  <Step title="Enter the 6-digit code">
+    Type the current 6-digit code from your app and verify it. This confirms your app and the
+    app are in sync.
+  </Step>
+  <Step title="Save your recovery codes">
+    You are shown 8 recovery codes. Copy or download them, then confirm you have saved them
+    somewhere safe. From now on, sign-in asks for a code from your app.
+  </Step>
+</Steps>
+
+## Recovery codes
+
+Recovery codes are your way back in if you lose your phone or your authenticator app.
+
+- You get 8 codes when you enroll.
+- Each code works once.
+- Store them in your password manager or print them and keep them somewhere safe.
+
+To replace them, open Settings, then Security, and choose Regenerate. The old codes stop
+working the moment new ones are generated. Regenerate if you are running low or think a code
+was exposed.
+
+<Warning>
+  If you lose both your authenticator app and your recovery codes, you can be locked out.
+  Save your recovery codes before you finish enrollment.
+</Warning>
+
+## Step-up on sensitive actions
+
+Some actions ask you to re-enter a code even though you are already signed in. This is
+called step-up, and it protects the highest-risk operations:
+
+- Starting, changing, or cancelling your subscription
+- Opening the billing portal
+- Deleting your account
+- Managing two-factor settings
+
+When you see the step-up prompt, enter a current code from your authenticator app and the
+action continues.
+
+## Turn off two-factor
+
+Open Settings, then Security, and choose Disable two-factor. Your authenticator and recovery
+codes are both invalidated. You may be asked for a code to confirm.
+
+## If you are locked out
+
+If you cannot sign in and your recovery codes are gone, see
+[Contact support](/troubleshooting/contact-support).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Change your password" icon="key" href="/account/change-email-or-password">
+    Set a new password from Settings.
+  </Card>
+  <Card title="Sync and privacy" icon="lock" href="/concepts/sync-and-privacy">
+    How your data is protected.
+  </Card>
+</CardGroup>

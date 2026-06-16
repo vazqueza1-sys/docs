@@ -1,0 +1,43 @@
+---
+title: "How money is stored"
+description: "The app stores amounts as whole numbers for exact precision. You always see and enter dollars."
+---
+
+Budget Bandit stores every amount as a whole number internally, not as a decimal.
+This is a precision choice, and it is the reason the math always adds up to the cent.
+You never have to think about it — you see and type dollars everywhere.
+
+## Why whole numbers
+
+Computers are bad at decimals. Store $0.10 as a decimal and add it ten times and you
+can drift to $0.9999999 instead of $1.00. Across a budget with thousands of
+transactions, those rounding errors pile up and balances stop matching.
+
+The fix is to store money as an integer count of a tiny unit, then divide for
+display. Budget Bandit keeps four digits of precision under the hood, so $1.00 is
+stored as a round whole number and every sum stays exact. Reconciling an account to
+the cent works because there is no hidden fraction to chase.
+
+## You always work in dollars
+
+This is purely an internal detail. Everywhere you look or type, the app is in
+dollars:
+
+- You enter `45.99` and the app records $45.99.
+- You read $1,240.00 Available, not a count of internal units.
+- Reports, totals, and exports are all in dollars and cents.
+
+You will never be asked to enter or read an internal unit. If a number ever looks off
+by a rounding error, that is a bug worth reporting — the storage model exists
+precisely to prevent it.
+
+## Next
+
+<CardGroup cols={2}>
+  <Card title="Reconcile an account" icon="scale-balanced" href="/reconciling/reconcile-an-account">
+    Match the app to your statement, down to the cent.
+  </Card>
+  <Card title="Sync and privacy" icon="shield" href="/concepts/sync-and-privacy">
+    How the same exact numbers stay in sync across your devices.
+  </Card>
+</CardGroup>

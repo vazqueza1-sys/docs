@@ -1,0 +1,95 @@
+---
+title: "CSV format"
+description: "Reference for the columns, date formats, and amount handling Budget Bandit expects when importing a CSV."
+---
+
+This is the reference for what a CSV needs to import cleanly. For the step-by-step
+flow, see <a href="/import/csv">Import a CSV</a>.
+
+<Note>
+  You do not have to rename your bank's columns. The importer lets you map any
+  column to the right field, and auto-detects the common ones. This page tells
+  you what each field expects.
+</Note>
+
+## Required fields
+
+A CSV must provide:
+
+- A **Date** column, and
+- Either an **Amount** column, **or** an **Inflow** and **Outflow** pair.
+
+Without both, the import cannot proceed.
+
+## Fields you can map
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **Date** | Yes | One date per transaction. |
+| **Amount** | One of Amount or Inflow/Outflow | Single signed column. Negative is spending. |
+| **Inflow (credit)** | — | Money in. Use with Outflow when your bank splits the two. |
+| **Outflow (debit)** | — | Money out. |
+| **Payee / Description** | No | Merchant or description. |
+| **Memo / Notes** | No | Extra text. |
+| **Category** | No | A category name if your file has one. |
+| **Reference ID** | No | A bank-supplied unique ID; improves duplicate matching. |
+| **Skip** | — | Mark columns you do not want imported. |
+
+You cannot map both a single **Amount** column and an **Inflow**/**Outflow**
+pair — choose one approach. The importer disables the conflicting options for
+you.
+
+## Date formats
+
+Leave the date format on **Auto-detect** unless the sample looks wrong. The
+supported explicit formats are:
+
+- `MM/DD/YYYY`
+- `DD/MM/YYYY`
+- `YYYY-MM-DD`
+- `M/D/YY`
+- `M/D/YYYY`
+- `DD-MM-YYYY`
+
+If your dates are ambiguous (for example `03/04/2026`), pick the exact format so
+day and month are not swapped.
+
+## Amounts
+
+- A single **Amount** column should be **negative for spending** and positive for
+  money in.
+- If your bank reports spending as positive numbers, tick **Invert amounts** to
+  flip every sign.
+- If you map **Inflow** only, every row imports positive. **Outflow** only,
+  every row imports negative.
+- Currency symbols and thousands separators (like `$1,250.00`) are handled.
+
+## Duplicate matching
+
+A **Reference ID** column, where your bank provides one, gives the most reliable
+duplicate detection — exact ID matches are caught precisely. Without it, Budget
+Bandit falls back to matching on date, amount, and payee within a few days. See
+duplicate handling in <a href="/import/csv">Import a CSV</a>.
+
+## A minimal example
+
+```csv
+Date,Description,Amount
+2026-06-01,Coffee Shop,-4.75
+2026-06-02,Paycheck,2200.00
+2026-06-03,Grocery Store,-86.20
+```
+
+That file imports cleanly: map `Date` to Date, `Description` to Payee /
+Description, and `Amount` to Amount.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Import a CSV" icon="table" href="/import/csv">
+    The full import flow.
+  </Card>
+  <Card title="Why rows did not import" icon="circle-question" href="/import/why-rows-didnt-import">
+    Diagnose skipped or dropped rows.
+  </Card>
+</CardGroup>

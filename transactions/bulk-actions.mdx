@@ -1,0 +1,79 @@
+---
+title: "Bulk actions"
+description: "Select many transactions, then set a category, status, flag, or tags — or delete them — in one step."
+---
+
+When several transactions need the same change, select them and act on the whole
+group at once instead of editing one row at a time.
+
+## Select transactions
+
+In the Transactions register or a single account, check the box on each row you
+want, or use the header checkbox to select everything in view. A bulk bar appears
+showing how many are selected. Choose **Deselect all** to clear the selection.
+
+## What you can change
+
+With rows selected, the bulk bar offers:
+
+<AccordionGroup>
+  <Accordion title="Category" icon="tag">
+    Set one category for every selected transaction. Useful after a rule misses
+    or a batch of imports comes in uncategorized.
+  </Accordion>
+  <Accordion title="Cleared / Uncleared" icon="circle-check">
+    Mark the selection **Cleared** or **Uncleared**. The account's cleared
+    balance shifts to match.
+  </Accordion>
+  <Accordion title="Flag" icon="flag">
+    Apply a color flag — red, orange, yellow, green, blue, or purple — to every
+    selected row, or clear their flags.
+  </Accordion>
+  <Accordion title="Tags" icon="tags">
+    **Add** tags to the selection or **Remove** tags from it. Adding keeps the
+    tags each transaction already has; removing leaves the other tags in place.
+    You can create a new tag from the picker while adding.
+  </Accordion>
+  <Accordion title="Delete" icon="trash">
+    Delete every selected transaction. This can't be undone from the dialog, so
+    confirm the count first. Deleting reverses each transaction's effect on its
+    account balance and category.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  To change the **payee** on a batch, set up a [rule](/rules/create-a-rule) and
+  [apply it retroactively](/rules/apply-retroactively), or
+  [merge payees](/transactions/payees) on the Payees page. The bulk bar covers
+  category, status, flag, tags, and delete.
+</Note>
+
+## Tips for clean batches
+
+- Use [search and filters](/transactions/flags-search-filter) first to bring up
+  exactly the rows you mean to change, then select all and apply.
+- For categorizing on autopilot going forward, a [rule](/rules/create-a-rule)
+  beats repeating a bulk change every month.
+
+## If something looks wrong
+
+- A bulk change hit the wrong rows → use undo (<kbd>z</kbd> on the web) right
+  away, or reverse it with another bulk action.
+- Balances look off after a bulk delete → [Reconcile an account](/reconciling/reconcile-an-account).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Search and filter" icon="magnifying-glass" href="/transactions/flags-search-filter">
+    Narrow the register before you select.
+  </Card>
+  <Card title="Categorize" icon="tag" href="/transactions/categorize">
+    Assign a category to a single transaction.
+  </Card>
+  <Card title="Tags" icon="tags" href="/transactions/tags">
+    Create and manage the tags you apply.
+  </Card>
+  <Card title="Create a rule" icon="wand-magic-sparkles" href="/rules/create-a-rule">
+    Automate the change instead of repeating it.
+  </Card>
+</CardGroup>

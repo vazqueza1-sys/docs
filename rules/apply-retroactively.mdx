@@ -1,0 +1,75 @@
+---
+title: "Apply a rule retroactively"
+description: "Run your active rules over transactions you already have, preview the matches, and apply them selectively."
+---
+
+Rules normally act on new transactions as they arrive. When you write a rule for
+a payee you've been buying from for months, you'll also want it to clean up the
+history. Applying retroactively runs your active rules across existing
+transactions and lets you choose which matches to keep.
+
+## Run rules over your history
+
+<Steps>
+  <Step title="Open the retroactive apply tool">
+    On the **Rules** page, choose **Apply Rules Retroactively**.
+  </Step>
+  <Step title="Set a date range (optional)">
+    Leave the **From** and **To** dates blank to scan everything, or set a range
+    to limit the scan to a period.
+  </Step>
+  <Step title="Preview the matches">
+    Choose **Preview Matches**. You'll see each transaction that matched, with its
+    date, payee, amount, and which rules matched it.
+  </Step>
+  <Step title="Choose what to apply">
+    Every match starts selected. Uncheck any transaction you'd rather leave
+    untouched.
+  </Step>
+  <Step title="Apply">
+    Choose **Apply**. The selected transactions get their matching rules'
+    actions, and the register updates.
+  </Step>
+</Steps>
+
+<Note>
+  Only **active** (enabled) rules take part. Pause a rule first if you don't want
+  it included in the retroactive run — see [Manage rules](/rules/manage-rules).
+</Note>
+
+## When to use it
+
+- Right after writing a new rule, to categorize the back-history it covers.
+- After a big [import](/import/overview), to sweep your rules across freshly
+  imported transactions in one pass.
+
+## Preview first, always
+
+The preview step exists so a broad rule doesn't reclassify transactions you've
+already handled by hand. Scan the match list before applying, and deselect
+anything that's already the way you want it.
+
+## If something looks wrong
+
+- No matches found → your rules' conditions may be narrower than the
+  transactions in range, or the date range excludes them. Widen the range or
+  loosen the conditions in [Create a rule](/rules/create-a-rule).
+- It changed transactions you didn't mean to → use undo (<kbd>z</kbd> on the web)
+  right after, then tighten the rule and re-run with a tighter selection.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Create a rule" icon="wand-magic-sparkles" href="/rules/create-a-rule">
+    Write the rule before you apply it.
+  </Card>
+  <Card title="Manage rules" icon="list-check" href="/rules/manage-rules">
+    Enable or pause rules before a retroactive run.
+  </Card>
+  <Card title="Import overview" icon="file-import" href="/import/overview">
+    Bring history in, then sweep rules across it.
+  </Card>
+  <Card title="Bulk actions" icon="layer-group" href="/transactions/bulk-actions">
+    One-off changes when a rule is overkill.
+  </Card>
+</CardGroup>

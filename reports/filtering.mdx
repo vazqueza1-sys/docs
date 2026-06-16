@@ -1,0 +1,54 @@
+---
+title: "Filtering reports"
+description: "Set the date range on any report, and narrow by account or category to focus the numbers on what you care about."
+---
+
+Every report opens on a sensible default and lets you narrow it down. The control they all share is the date range. Some reports add their own scope on top of that.
+
+## Set the date range
+
+At the top of each report is a date filter. Pick one of:
+
+- This month
+- Last month
+- Last 3 months
+- Last 6 months
+- This year
+- All time
+
+Change it once and the chart redraws for the new window. The date range carries the same meaning across every report, so "last 3 months" on Spending and on Cash Flow cover the same span.
+
+<Tip>
+For month-to-month tuning, start with **This month** or **Last month**. To read a trend, widen to **Last 6 months** or **This year**.
+</Tip>
+
+## Account and category scope
+
+Reports are scoped to the data they're built on:
+
+- **Net Worth** and **Balance Over Time** are driven by your accounts and their [types](/accounts/account-types). An account that's the wrong type lands on the wrong side of the math.
+- **Spending**, **Income**, and **Budget vs Actual** are driven by your categories. Clean categories and merged payees make these reports read clearly.
+- **Forecast** is driven by your [schedules](/scheduled/create-a-schedule). The more recurring items you've set up, the fuller the projection.
+
+To change which accounts or categories appear, adjust the underlying data — close an unused account, [merge duplicate payees](/transactions/payees), or fix [uncategorized transactions](/transactions/to-review) — and the reports follow.
+
+<Note>
+Transfers between your own accounts are excluded from income and spending reports by design, so moving money between accounts won't distort the totals.
+</Note>
+
+## If a report looks empty or wrong
+
+- Empty chart — widen the date range; the current window may have no matching activity.
+- Missing money — look for [uncategorized transactions](/transactions/to-review).
+- A balance is off — [reconcile the account](/reconciling/reconcile-an-account).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="All reports" icon="chart-pie" href="/reports/overview">
+    Browse the full set of eleven.
+  </Card>
+  <Card title="Search and filter transactions" icon="filter" href="/transactions/flags-search-filter">
+    Filter the underlying register in detail.
+  </Card>
+</CardGroup>

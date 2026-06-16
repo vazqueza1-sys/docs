@@ -1,0 +1,78 @@
+---
+title: "Flags, search, and filters"
+description: "Mark transactions with color flags, search by payee or memo, and narrow the register with the filter set."
+---
+
+The Transactions register holds everything across your accounts. Flags, search,
+and filters let you mark what matters and pull up exactly the rows you want.
+
+## Color flags
+
+A flag is a colored dot you put on a transaction to mean whatever you decide —
+"review later," "tax-deductible," "shared expense." Six colors are available:
+**red, orange, yellow, green, blue, and purple**.
+
+- **Web:** click the flag dot at the start of a transaction row and pick a color,
+  or right-click the row and choose a flag color. Clearing the flag removes it.
+- **Bulk:** select several rows and set or clear a flag with
+  [bulk actions](/transactions/bulk-actions).
+
+## Search
+
+Use the search box at the top of the register to find transactions by **payee or
+memo**. Type your term and press <kbd>Enter</kbd>. Search narrows the list to
+matching rows; combine it with the filters below to narrow further.
+
+## Filters
+
+The filter bar narrows the register to the rows you want. Available filters:
+
+| Filter | What it does |
+| --- | --- |
+| Account | Show one account, or all accounts |
+| Category | Show one category, or all categories |
+| Status | Uncleared, Cleared, or Reconciled |
+| Flag | A specific flag color, "No flag," or any |
+| Tags | One or more [tags](/transactions/tags) — matches a row with any of them |
+| Date from / to | A date range |
+
+A count next to **Clear** shows how many filters are active. Choose **Clear** to
+reset the register to every transaction.
+
+<Tip>
+  Filters stack. Pick an account, a category, and a date range together to answer
+  a question like "what did I spend on Groceries from this checking account last
+  month."
+</Tip>
+
+## Cleared, uncleared, and reconciled
+
+The **Status** filter uses the same three states a transaction can have:
+
+- **Uncleared** — entered, but not yet confirmed against the bank.
+- **Cleared** — confirmed it posted at the bank.
+- **Reconciled** — locked in during a reconciliation. See
+  [Reconcile an account](/reconciling/reconcile-an-account).
+
+## If something looks wrong
+
+- A transaction you expect isn't showing → a filter may be hiding it; choose
+  **Clear** to reset.
+- Still missing → [Duplicate or missing transactions](/accounts/duplicate-or-missing-transactions).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Tags" icon="tags" href="/transactions/tags">
+    Cross-cutting labels you can filter by.
+  </Card>
+  <Card title="Bulk actions" icon="layer-group" href="/transactions/bulk-actions">
+    Set flags or status on many rows at once.
+  </Card>
+  <Card title="Reconcile an account" icon="scale-balanced" href="/reconciling/reconcile-an-account">
+    Lock in a cleared balance you can trust.
+  </Card>
+  <Card title="Report filtering" icon="filter" href="/reports/filtering">
+    Filter reports by date, account, and category.
+  </Card>
+</CardGroup>

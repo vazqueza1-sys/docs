@@ -1,0 +1,84 @@
+---
+title: "Connect a bank"
+description: "Link a bank through Plaid so transactions arrive on their own, and control how often they sync."
+---
+
+Linking a bank pulls your transactions in automatically through Plaid, the same
+connection layer your bank already trusts. Budget Bandit never sees your bank
+password — you sign in inside Plaid's secure window.
+
+## Link an institution
+
+<Steps>
+  <Step title="Open Connections">
+    Go to Settings, then Connections. Under "Link a new institution," choose
+    **Connect a bank**.
+  </Step>
+  <Step title="Sign in through Plaid">
+    Find your bank, then enter your credentials in the Plaid window. If your bank
+    uses a one-time code or app approval, complete it there.
+  </Step>
+  <Step title="Map the accounts">
+    Plaid returns the accounts at that institution. For each one, choose to
+    **create a new account** in Budget Bandit or **attach it to an existing
+    account** you have been tracking by hand. Attaching keeps the transactions
+    you already entered and lets the linked feed take over from there.
+  </Step>
+  <Step title="Finish">
+    Budget Bandit creates or links the accounts and pulls the first batch of
+    transactions. They land in your <a href="/transactions/to-review">To Review</a>
+    queue uncategorized, so nothing is filed until you confirm it.
+  </Step>
+</Steps>
+
+<Note>
+  Linking a bank does **not** create a new budget. It adds or links accounts
+  inside the budget you are in. Only the file migration importers (YNAB,
+  Monarch, Actual) create a separate budget. See <a href="/import/overview">Import overview</a>.
+</Note>
+
+## What auto-sync does
+
+Once linked, Budget Bandit pulls new transactions from the institution on a
+recurring basis. Each sync:
+
+- **Adds** new transactions to the matching account, unapproved, in To Review.
+- **Promotes** a pending transaction to posted in place when the bank clears it,
+  so you do not get two rows for the same purchase. See <a href="/accounts/pending-vs-posted">Pending vs posted</a>.
+- **Removes** a transaction if the bank reverses or drops it.
+
+You can also pull on demand. On the Connections page, choose **Sync now** next to
+an institution. The toast tells you how many were added, updated, or removed.
+
+<Tip>
+  Imported transactions are denominated in the amounts your bank reports. Confirm
+  and categorize them from To Review, then they flow into your budget.
+</Tip>
+
+## When a connection needs attention
+
+Banks periodically require you to re-authenticate. When that happens the
+institution shows **Reconnect required** or **Expiring soon** on the Connections
+page. Fix it with <a href="/accounts/reconnect-a-bank">Reconnect a bank</a>.
+
+## If something looks wrong
+
+- Transactions not updating: <a href="/accounts/fix-sync-problems">Fix sync problems</a>.
+- Two of the same charge, or a charge missing: <a href="/accounts/duplicate-or-missing-transactions">Duplicate or missing transactions</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Supported banks" icon="building-columns" href="/accounts/supported-banks">
+    Coverage through Plaid, and what to do if your bank is not found.
+  </Card>
+  <Card title="Reconnect a bank" icon="rotate" href="/accounts/reconnect-a-bank">
+    Restore a broken or expired connection, including the MFA step.
+  </Card>
+  <Card title="Manual accounts" icon="pen" href="/accounts/manual-accounts">
+    Track an account by hand when a feed is not available.
+  </Card>
+  <Card title="Sync and privacy" icon="lock" href="/concepts/sync-and-privacy">
+    How your data moves and what stays on device.
+  </Card>
+</CardGroup>

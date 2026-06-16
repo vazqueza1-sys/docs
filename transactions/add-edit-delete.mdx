@@ -1,0 +1,105 @@
+---
+title: "Add, edit, and delete transactions"
+description: "Enter a transaction by hand, fix one inline, or remove it — on the web register and the mobile app."
+---
+
+A transaction is one line of money in or out of an account. You can type one in,
+correct it later, or delete it. The numbers in your budget and on the account
+move the instant you save.
+
+## Add a transaction
+
+You have three ways to enter one on the web.
+
+<Tabs>
+  <Tab title="Quick add (anywhere)">
+    Press <kbd>n</kbd> from any screen, or open the quick-add dialog from the
+    command palette. Set the date, account, payee, category, and amount, then
+    save.
+
+    A negative amount is an outflow; a positive amount is an inflow.
+  </Tab>
+  <Tab title="In the register">
+    Open **Transactions** or a single account, then choose **Add Transaction**.
+    A row opens at the top of the list with fields for date, account, payee,
+    category, memo, outflow, and inflow. Fill the outflow column or the inflow
+    column — not both. Press <kbd>Enter</kbd> to save and keep the row open for
+    the next entry.
+  </Tab>
+  <Tab title="Mobile">
+    Tap the **+** button in the corner of the Transactions tab. Choose
+    **Outflow** or **Inflow**, type the amount, pick the account, set the payee,
+    and optionally a category. Tap **Add**.
+  </Tab>
+</Tabs>
+
+<Note>
+  Picking another one of your accounts as the payee turns the entry into a
+  [transfer](/transactions/transfers) instead of a normal transaction.
+</Note>
+
+### Make it recurring as you add it
+
+In the register's add row, the **Repeat** dropdown defaults to **One-time**.
+Pick a cadence (Weekly, Monthly, and so on) and the entry is saved as a
+transaction *and* a [scheduled transaction](/scheduled/create-a-schedule) using
+the date you chose as the anchor.
+
+## Edit a transaction
+
+<Steps>
+  <Step title="Open the row">
+    On the web, click a transaction in the register to open it for inline
+    editing. On mobile, tap the row to open the edit sheet.
+  </Step>
+  <Step title="Change the fields">
+    Adjust the date, payee, category, memo, or amount. The category picker shows
+    how much is still available in that category for the transaction's month.
+  </Step>
+  <Step title="Save">
+    Save the row. The account balance and the budget grid update immediately.
+  </Step>
+</Steps>
+
+<Note>
+  The account on an existing row is fixed in the inline editor. To move a
+  transaction to a different account, delete it and re-enter it, or record a
+  [transfer](/transactions/transfers).
+</Note>
+
+## Delete a transaction
+
+- **Web:** select the row's checkbox and use [bulk actions](/transactions/bulk-actions)
+  to delete, or delete it from the edit view.
+- **Mobile:** long-press the row and choose **Delete** from the quick-action
+  sheet.
+
+Deleting a transaction reverses its effect on the account balance and on the
+category it was assigned to. Deleting one leg of a transfer removes both legs.
+
+<Tip>
+  Pressed delete by mistake? Use undo (<kbd>z</kbd> on the web) right away to
+  bring the transaction back.
+</Tip>
+
+## If something looks wrong
+
+- A balance that doesn't match your bank → [Reconcile an account](/reconciling/reconcile-an-account).
+- A transaction you can't find → [Duplicate or missing transactions](/accounts/duplicate-or-missing-transactions).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Categorize a transaction" icon="tag" href="/transactions/categorize">
+    Assign or change the category on a transaction.
+  </Card>
+  <Card title="Transfers" icon="arrow-right-arrow-left" href="/transactions/transfers">
+    Move money between two of your own accounts.
+  </Card>
+  <Card title="Search and filter" icon="magnifying-glass" href="/transactions/flags-search-filter">
+    Find a transaction by payee, date, account, or amount.
+  </Card>
+  <Card title="Bulk actions" icon="layer-group" href="/transactions/bulk-actions">
+    Change many transactions at once.
+  </Card>
+</CardGroup>

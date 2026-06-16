@@ -1,0 +1,48 @@
+---
+title: "Face ID and app lock"
+description: "Lock the mobile app behind Face ID or a fingerprint, and keep your balances out of the app switcher with the privacy blur."
+---
+
+The mobile app has two privacy layers: a biometric lock that gates the whole app, and a blur that hides your numbers in the OS app switcher. The blur is always on; the lock is yours to enable.
+
+## Turn on the biometric lock
+
+<Steps>
+  <Step title="Open Settings">
+    Tap the gear in the header to open **Settings**.
+  </Step>
+  <Step title="Enable Biometric Lock">
+    Turn on **Biometric Lock**. From then on, the app requires Face ID, a fingerprint, or your device passcode to open.
+  </Step>
+</Steps>
+
+The toggle only appears if your device has biometrics or a passcode set up. If you don't see it, add Face ID, Touch ID, or a device passcode in your phone's settings first.
+
+## How the lock behaves
+
+- When the lock is on, the app shows a locked screen and prompts for Face ID or fingerprint as soon as you open it.
+- It re-locks every time the app returns from the background, so stepping away and coming back asks again.
+- If the prompt is dismissed, tap **Unlock** to try again.
+
+<Note>
+The lock uses your device's own Face ID, Touch ID, or passcode. Budget Bandit never sees or stores your biometric data — that stays on your phone.
+</Note>
+
+## The app-switcher blur
+
+Whenever the app leaves the foreground — when you open the app switcher or multitask — Budget Bandit blurs its contents so your balances don't show up in the OS snapshot. This happens automatically and needs no setup. It pairs with the biometric lock, but it's on even if you leave the lock off.
+
+## If you get locked out
+
+The lock relies on your device's biometrics and passcode. If those fail, use your device's standard passcode fallback. The app can't bypass your phone's own authentication.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Privacy mode" icon="eye-slash" href="/account/privacy-mode">
+    Blur amounts on the web app too.
+  </Card>
+  <Card title="Two-factor authentication" icon="shield-halved" href="/account/two-factor-authentication">
+    Add a second factor to your account.
+  </Card>
+</CardGroup>

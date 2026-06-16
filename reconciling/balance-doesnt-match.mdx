@@ -1,0 +1,92 @@
+---
+title: "Balance doesn't match"
+description: "When your cleared total won't match the statement, find the discrepancy — or post a balance adjustment to close the gap."
+---
+
+If you are reconciling and your cleared total will not equal the statement balance, there
+is a difference between what Budget Bandit thinks happened and what your bank recorded. The
+goal is to find it. When you genuinely cannot, Budget Bandit can post a single adjustment to
+close the gap so the account reconciles.
+
+## Find the discrepancy first
+
+Most mismatches come from a handful of causes. Work through these before adjusting.
+
+<AccordionGroup>
+  <Accordion title="A transaction is missing">
+    Something posted at the bank that is not in Budget Bandit yet — a charge, a fee, or
+    interest. Add it. This is the most common cause on manual accounts. See
+    [Add a transaction](/transactions/add-edit-delete).
+  </Accordion>
+  <Accordion title="A transaction is duplicated">
+    The same transaction was entered twice, often when a manual entry and a synced one
+    overlap. Delete the extra. See
+    [Duplicate or missing transactions](/accounts/duplicate-or-missing-transactions).
+  </Accordion>
+  <Accordion title="An amount is wrong">
+    A transaction was entered for the wrong amount, or as an outflow instead of an inflow.
+    Open it and correct it.
+  </Accordion>
+  <Accordion title="Something is not cleared yet">
+    A transaction that has posted at the bank is still uncleared in Budget Bandit, so it is
+    not counting toward your cleared total. Mark it cleared.
+  </Accordion>
+  <Accordion title="A pending transaction is in the statement balance">
+    A charge still pending at the bank may not be reflected the same way on both sides.
+    See [Pending vs posted](/accounts/pending-vs-posted).
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Note the exact size of the gap. A difference that matches a transaction you recognize
+  points straight at the culprit — a $12.40 gap is probably one $12.40 transaction missing,
+  duplicated, or mis-entered.
+</Tip>
+
+## Post a balance adjustment
+
+If you have checked everything and a small difference remains — a stray fee you cannot
+source, rounding on an old account — Budget Bandit can post a balance adjustment so the
+account reconciles to the statement.
+
+When you finish reconciling with a remaining difference, Budget Bandit creates a single
+transaction for exactly that gap, against a system payee named **Reconciliation Balance
+Adjustment**, dated to your statement date. It nudges the account's working balance to
+match the statement and is included in the reconciliation.
+
+<Steps>
+  <Step title="Confirm everything you can">
+    Mark all the cleared transactions you are sure of and enter the statement balance.
+  </Step>
+  <Step title="Let Budget Bandit calculate the difference">
+    The remaining gap between your cleared total and the statement balance becomes the
+    adjustment amount.
+  </Step>
+  <Step title="Finish reconciling">
+    The adjustment transaction is created and reconciled along with the rest. The account
+    now matches the statement.
+  </Step>
+</Steps>
+
+<Warning>
+  An adjustment is a last resort, not the routine fix. It records that a difference existed
+  rather than explaining it. If the gap is large, keep looking — a big adjustment usually
+  means a real transaction is missing or duplicated, and the adjustment would only hide it.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Reconcile an account" icon="circle-check" href="/reconciling/reconcile-an-account">
+    The full reconcile flow.
+  </Card>
+  <Card title="Duplicate or missing transactions" icon="copy" href="/accounts/duplicate-or-missing-transactions">
+    The most common cause of a mismatch.
+  </Card>
+  <Card title="Pending vs posted" icon="hourglass-half" href="/accounts/pending-vs-posted">
+    Why a pending charge can throw off a balance.
+  </Card>
+  <Card title="Add, edit, delete" icon="pen" href="/transactions/add-edit-delete">
+    Fix a wrong or missing transaction.
+  </Card>
+</CardGroup>

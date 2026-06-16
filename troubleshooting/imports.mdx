@@ -1,0 +1,75 @@
+---
+title: "Fix import problems"
+description: "Will an import overwrite your budget (no), why rows go missing, and how to fix format errors."
+---
+
+Most import questions come down to three things: whether an import touches your current budget,
+why some rows did not come in, and what to do about a format error.
+
+## Will an import overwrite my budget?
+
+No. **Every import creates a brand-new budget.** It never overwrites, merges into, or changes
+the budget you are already using. This is true for all importers — YNAB, Monarch, Actual, CSV,
+and OFX/QFX.
+
+That means you can import without risk. If you do not like the result, delete the new budget and
+your original is untouched. See [Import overview](/import/overview).
+
+<Note>
+  Because every import is a new budget, importing twice gives you two budgets. If you re-import to
+  fix something, delete the earlier attempt so you are not switching between duplicates.
+</Note>
+
+## Some rows did not import
+
+<AccordionGroup>
+  <Accordion title="Rows were skipped as duplicates">
+    The importer detects duplicate transactions and skips them so you do not get doubles. If a row
+    you expected is missing, it likely matched an existing one. See
+    [Why rows didn't import](/import/why-rows-didnt-import).
+  </Accordion>
+  <Accordion title="A column was not recognized">
+    For CSV imports, the columns have to be mapped to date, payee, amount, and so on. If a row is
+    missing required fields after mapping, it is skipped. See
+    [CSV format](/import/csv-format) and [CSV import](/import/csv).
+  </Accordion>
+  <Accordion title="Transfers showed up once instead of twice">
+    Transfers between two of your accounts are a single movement with two sides. The importers
+    de-duplicate the pair so a transfer is not counted twice. This is expected.
+  </Accordion>
+</AccordionGroup>
+
+## Format errors
+
+<AccordionGroup>
+  <Accordion title="The file would not upload">
+    Check you are using the right importer for the file. YNAB, Monarch, and Actual each export a
+    specific format — use the matching importer. For a plain export from a bank, use CSV or OFX/QFX.
+    See [Import overview](/import/overview).
+  </Accordion>
+  <Accordion title="Amounts imported with the wrong sign">
+    Some files record spending as positive and income as negative, or the reverse. During CSV
+    mapping, confirm which column or sign means money out versus money in. See
+    [CSV format](/import/csv-format).
+  </Accordion>
+  <Accordion title="Dates look wrong">
+    Date formats vary by country (day-month-year versus month-day-year). Check the mapped date column
+    against a row you recognize before finishing the import.
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck
+
+If a file will not import and the format looks right, reach us over
+[in-app chat](/troubleshooting/contact-support) with the file you are trying to import.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Import overview" icon="file-import" href="/import/overview">
+    Every importer and the new-budget rule.
+  </Card>
+  <Card title="Why rows didn't import" icon="circle-question" href="/import/why-rows-didnt-import">
+    Duplicates, missing fields, and skipped rows.
+  </Card>
+</CardGroup>

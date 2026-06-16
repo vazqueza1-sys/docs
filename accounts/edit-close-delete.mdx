@@ -1,0 +1,95 @@
+---
+title: "Edit, close, or delete an account"
+description: "Rename an account, change its type, close it to hide it, or delete it permanently."
+---
+
+You manage an account from the **Edit account** dialog. Open Accounts, find the
+account, and choose the edit (pencil) control. From there you can change details,
+close the account, or — with care — delete it.
+
+## Edit account details
+
+In the edit dialog you can change:
+
+- **Name** — renames the account everywhere, including transaction rows.
+- **Type** — see <a href="/accounts/account-types">Account types</a>.
+- **Include in budget** — switch between on-budget and tracking.
+- **Note** — a private note on the account.
+
+For a **credit card**, the dialog also exposes statement close day, payment due
+day, APR, minimum payment, credit limit, and any promotional APR. These feed the
+<a href="/credit-cards/debt-payoff">debt payoff report</a> and payment timing.
+
+Choose **Save changes** to apply.
+
+<Note>
+  Editing an account does not change its starting balance. To correct a balance,
+  add a transaction or <a href="/reconciling/reconcile-an-account">reconcile</a>
+  the account against a statement.
+</Note>
+
+## Close an account
+
+Closing hides an account you no longer use without erasing its history. Reports
+and past transactions stay intact.
+
+<Steps>
+  <Step title="Open Edit account">
+    Open the account's edit dialog.
+  </Step>
+  <Step title="Close it">
+    In the Close account section, choose **Close account**. If the account still
+    has a balance, Budget Bandit reminds you — consider transferring or clearing
+    the balance first.
+  </Step>
+</Steps>
+
+A closed account drops out of your everyday lists. You can **Reopen account** from
+the same dialog at any time.
+
+<Tip>
+  Closing is the right choice for almost every "I'm done with this account"
+  case. It keeps your reports accurate. Reach for delete only when the account
+  was created by mistake.
+</Tip>
+
+## Delete an account
+
+Deleting is permanent and removes the account along with everything attached to
+it: its transactions, its splits, and any scheduled transactions on it. Transfer
+links to other accounts are cleaned up so no other account is left pointing at a
+deleted row.
+
+<Warning>
+  Deleting an account cannot be undone. Its transactions are gone from your
+  history and your reports. If you only want it out of the way, **close** it
+  instead.
+</Warning>
+
+If the account had a linked credit-card payment category, that category is hidden
+rather than dropped, because it may hold budget history.
+
+## A linked (bank-synced) account
+
+If the account is connected through Plaid, disconnect the bank first from
+Settings, then Connections, so the feed stops sending new transactions. See
+<a href="/accounts/reconnect-a-bank">Reconnect a bank</a> for the connection
+controls. Disconnecting preserves the account and its transactions; it only
+stops the feed.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Reconcile an account" icon="scale-balanced" href="/reconciling/reconcile-an-account">
+    Lock in a balance before closing.
+  </Card>
+  <Card title="Transfers" icon="arrow-right-arrow-left" href="/transactions/transfers">
+    Move a remaining balance to another account.
+  </Card>
+  <Card title="Account types" icon="layer-group" href="/accounts/account-types">
+    Change what an account is treated as.
+  </Card>
+  <Card title="Export your data" icon="file-export" href="/account/export-your-data">
+    Keep a copy before deleting anything.
+  </Card>
+</CardGroup>

@@ -1,0 +1,66 @@
+---
+title: "Supported banks"
+description: "Bank coverage comes through Plaid. What to do when your institution is not in the list."
+---
+
+Budget Bandit connects to banks through Plaid, which links thousands of US
+institutions — major national banks, regional banks, credit unions, and most
+brokerages and card issuers. If your institution is in Plaid's network, you can
+link it from Settings, then Connections. See <a href="/accounts/connect-a-bank">Connect a bank</a>.
+
+## How to check coverage
+
+The fastest way to know whether your bank is supported is to start a link:
+
+<Steps>
+  <Step title="Open the link window">
+    Settings, then Connections, then **Connect a bank**.
+  </Step>
+  <Step title="Search for your institution">
+    Type the bank or card issuer name in the Plaid window. If it appears, it is
+    supported.
+  </Step>
+</Steps>
+
+<Note>
+  Coverage is set by Plaid, not by Budget Bandit. A bank that is missing today
+  may be added later, and a connection can be temporarily unavailable during
+  bank-side maintenance.
+</Note>
+
+## If your bank is not found
+
+You have two ways to keep budgeting without a live feed. Neither one waits on
+Plaid.
+
+<CardGroup cols={2}>
+  <Card title="Track it manually" icon="pen" href="/accounts/manual-accounts">
+    Add the account by hand with a starting balance and enter transactions
+    yourself. Everything in the budget works the same.
+  </Card>
+  <Card title="Import a file" icon="file-arrow-up" href="/import/overview">
+    Download a CSV or OFX/QFX file from your bank's website and bring the history
+    in. A file import into an existing account does not create a new budget.
+  </Card>
+</CardGroup>
+
+Many banks that are hard to link still offer a downloadable statement. A
+periodic <a href="/import/csv">CSV import</a> or <a href="/import/ofx-qfx">OFX/QFX import</a>
+is a reliable fallback, and duplicate detection keeps repeated downloads from
+double-entering.
+
+## If a linked bank stops working
+
+A bank that linked once but now shows an error usually needs to be
+re-authenticated rather than re-added. See <a href="/accounts/reconnect-a-bank">Reconnect a bank</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Connect a bank" icon="building-columns" href="/accounts/connect-a-bank">
+    Link an institution through Plaid.
+  </Card>
+  <Card title="Fix sync problems" icon="wrench" href="/accounts/fix-sync-problems">
+    A linked account that has gone stale.
+  </Card>
+</CardGroup>

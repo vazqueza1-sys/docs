@@ -1,0 +1,74 @@
+---
+title: "Import from Actual"
+description: "Move your Actual Budget export — accounts, categories, transactions, and monthly assignments — into a new Budget Bandit budget."
+---
+
+The Actual importer reads your Actual Budget export and rebuilds it as a new
+budget: accounts, categories, transactions, and the amounts you budgeted each
+month.
+
+<Warning>
+  This import creates a **brand-new budget**. It never overwrites or merges into
+  a budget you already have.
+</Warning>
+
+## Export from Actual
+
+In Actual Budget, export your budget. Actual produces a `.zip` file that contains
+the budget database (`db.sqlite`) and a `metadata.json` file. Keep the `.zip`
+intact — do not unzip it.
+
+## Import into Budget Bandit
+
+<Steps>
+  <Step title="Open the Actual importer">
+    Go to Import, then **Import from Actual Budget**.
+  </Step>
+  <Step title="Upload the .zip">
+    Drag the `.zip` onto the drop zone, or click to browse. Budget Bandit reads
+    the budget file in your browser.
+  </Step>
+  <Step title="Review the preview">
+    You see counts for accounts, categories, transactions, and budget months.
+    Confirm the budget name.
+  </Step>
+  <Step title="Import everything">
+    Choose to import. Budget Bandit creates the new budget, switches to it, and
+    loads your data.
+  </Step>
+</Steps>
+
+## What comes across
+
+- **Accounts** with their balances.
+- **Category groups and categories** as you had them in Actual.
+- **Transactions**, including split transactions, with their cross-links
+  preserved.
+- **Monthly assignments** — what you budgeted per category per month.
+
+<Note>
+  If the export is missing `metadata.json` or `db.sqlite`, Budget Bandit cannot
+  read it. Upload the full `.zip` from Actual rather than a file you extracted
+  from it.
+</Note>
+
+## After importing
+
+Open <a href="/budgeting/assign-and-move-money">the budget</a> to see your assignments, and review
+categorization in <a href="/transactions/to-review">To Review</a>.
+
+## If something looks off
+
+See <a href="/import/why-rows-didnt-import">Why rows did not import</a> or
+<a href="/troubleshooting/imports">import troubleshooting</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Import overview" icon="arrow-right-arrow-left" href="/import/overview">
+    All five importers and the new-budget rule.
+  </Card>
+  <Card title="Splits" icon="divide" href="/transactions/splits">
+    How split transactions behave after the move.
+  </Card>
+</CardGroup>

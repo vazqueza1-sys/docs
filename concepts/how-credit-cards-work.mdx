@@ -1,0 +1,85 @@
+---
+title: "How credit cards work"
+description: "The funded-portion model: budget for a purchase, spend on the card, and the money moves to where it is safe to pay."
+---
+
+Credit cards work differently from cash accounts, and Budget Bandit handles them so
+the math stays honest. The short version: when you budget for something and then put
+it on a credit card, the money you budgeted moves to that card's payment category,
+where it waits — safe to pay the bill.
+
+This is the funded-portion model. Only money you actually budgeted moves. Spending
+you did not budget for shows up as a shortfall, in red, so you can see it.
+
+## The idea in one example
+
+Say you have a Credit Card account and a Groceries category.
+
+1. You assign $200 to Groceries.
+2. You buy $80 of groceries on the credit card.
+3. Groceries drops to $120 Available, the same as if you had paid with cash.
+4. That $80 moves to the card's **Payment** category. It now reads $80 — that much
+   of your card balance is funded and safe to pay.
+
+You budgeted for the spending, so the dollars followed the purchase onto the card.
+When the statement comes, the Payment category already holds the money to cover
+what you charged.
+
+## The Payment category
+
+Every credit card has a Payment category, created for you when you add the card. You
+do not type money into it directly the way you fund Groceries. It fills as you spend
+on the card with budgeted money. The number in it answers one question: how much of
+this card's balance is safe to pay right now.
+
+When you pay the card, you record a transfer from a cash account to the credit card,
+and the Payment category drops by what you paid. See
+[Pay your card](/credit-cards/pay-your-card).
+
+## When the Payment category goes red
+
+If you spend on the card without budgeting for it first, there is no money to move.
+The purchase still hits the card balance, but the Payment category comes up short
+and shows red. Red means: you charged more than you funded, and you owe money the
+budget has not set aside.
+
+Fix it by assigning money to the category you overspent. Cover the overspending and
+the dollars flow onward to the Payment category automatically — the shortfall
+clears. See [Payment category is red](/credit-cards/payment-category-is-red).
+
+<Note>
+  There are two kinds of overspending, and the app colors them differently. Spending
+  cash you did not have shows red — that money truly left your accounts. Overspending
+  on a credit card that you have not funded shows amber — the cash never left, but
+  you owe it on the card. Amber is a heads-up; red is a hole to fill.
+</Note>
+
+## Refunds and credits
+
+A refund to the card, categorized to the same category as the original purchase,
+nets against that spending. The money flows back the same way it flowed out — no
+special steps. See [Refunds and credits](/credit-cards/refunds-and-credits).
+
+## Paying down existing debt
+
+If you started with a balance on the card, that is debt to pay down over time, not
+spending you just budgeted for. Budget a monthly payment toward it like any other
+goal. The [Debt Payoff report](/reports/forecast-and-debt) projects how long it
+takes and what interest costs. See [Debt payoff](/credit-cards/debt-payoff).
+
+## Next
+
+<CardGroup cols={2}>
+  <Card title="Set up a card" icon="credit-card" href="/credit-cards/set-up-a-card">
+    Add a credit card and its balance the right way.
+  </Card>
+  <Card title="Pay your card" icon="money-check-dollar" href="/credit-cards/pay-your-card">
+    Record a payment so the Payment category and the balance both update.
+  </Card>
+  <Card title="Payment category is red" icon="triangle-exclamation" href="/credit-cards/payment-category-is-red">
+    What the shortfall means and how to clear it.
+  </Card>
+  <Card title="Debt payoff" icon="chart-line-down" href="/credit-cards/debt-payoff">
+    Plan down a starting balance and see the timeline.
+  </Card>
+</CardGroup>

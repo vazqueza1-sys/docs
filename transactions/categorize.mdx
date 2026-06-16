@@ -1,0 +1,72 @@
+---
+title: "Categorize a transaction"
+description: "Assign a category to a transaction, or change one that's already set, so spending lands in the right envelope."
+---
+
+A category tells the budget where a transaction belongs. Categorized outflows
+draw down the money you assigned to that category; categorized income adds to
+Ready to Assign. A transaction with no category still affects the account
+balance, but it won't show up in your category spending until you assign one.
+
+## Set or change a category
+
+<Tabs>
+  <Tab title="Web">
+    Click the transaction in the register to open it, then pick a category from
+    the category field. The picker groups categories the same way your budget
+    does, and it shows how much is still **available** in the selected category
+    for that transaction's month. Save the row.
+  </Tab>
+  <Tab title="Mobile">
+    Long-press the transaction and choose **Categorize**, then pick a category
+    from the searchable list. You can also open the full edit sheet by tapping
+    the row and set the category there.
+  </Tab>
+</Tabs>
+
+To remove a category, open the picker and choose the clear / "No category"
+option.
+
+## Categorize many at once
+
+If several transactions belong in the same category, select them and use
+[bulk actions](/transactions/bulk-actions) → **Category** to set them all in one
+step.
+
+## Let categorizing happen on its own
+
+You don't have to categorize every transaction by hand:
+
+- **Rules** apply a category automatically based on the payee, amount, memo, or
+  account. See [Create a rule](/rules/create-a-rule).
+- **Payees** can carry a default category, so the next transaction from that
+  payee starts out categorized. See [Payees](/transactions/payees).
+
+## A note on transfers
+
+A [transfer](/transactions/transfers) between two of your accounts has no
+category — it isn't spending, just money moving. Transfer rows show the other
+account's name in place of a category.
+
+## If something looks wrong
+
+- Spending isn't showing in a category → confirm the transaction has that
+  category set, and that the date falls in the month you're viewing.
+- A category went negative → [Cover overspending](/budgeting/cover-overspending).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Create a rule" icon="wand-magic-sparkles" href="/rules/create-a-rule">
+    Auto-categorize transactions by payee or amount.
+  </Card>
+  <Card title="Bulk actions" icon="layer-group" href="/transactions/bulk-actions">
+    Recategorize a batch of transactions at once.
+  </Card>
+  <Card title="Payees" icon="user-tag" href="/transactions/payees">
+    Give a payee a default category.
+  </Card>
+  <Card title="Categories and groups" icon="folder-tree" href="/concepts/categories-and-groups">
+    How categories and groups are organized.
+  </Card>
+</CardGroup>

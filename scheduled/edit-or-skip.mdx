@@ -1,0 +1,79 @@
+---
+title: "Edit or skip a scheduled transaction"
+description: "Change a schedule's pattern, enter or skip a single occurrence, or stop a schedule you no longer need."
+---
+
+Once a schedule is running, you manage it from the **Scheduled** page. Schedules
+are grouped into **Upcoming** (due within 30 days), **Active**, and **Completed**.
+Each scheduled transaction also feeds the
+[Forecast report](/reports/forecast-and-debt), so changes here ripple into your
+projected cash flow.
+
+## Edit the pattern
+
+Click a schedule to open it, then change the account, payee, amount, category,
+cadence, or any [advanced option](/scheduled/create-a-schedule#advanced-options).
+Save. If you change the timing, the next due date recalculates from your edit.
+
+## Enter or skip one occurrence
+
+Manual schedules wait for you to handle each due date. On an upcoming manual
+schedule you have two single-occurrence actions:
+
+<Steps>
+  <Step title="Enter">
+    Choose **Enter** to post this occurrence now. It creates the real transaction
+    on the account, and the schedule advances to its next due date.
+  </Step>
+  <Step title="Skip">
+    Choose **Skip** to pass on this occurrence without creating a transaction. The
+    schedule jumps straight to its next due date.
+  </Step>
+</Steps>
+
+<Note>
+  Enter and Skip apply to **manual** schedules. Automatic schedules post on their
+  own, so they don't show these actions — to stop one, edit it or delete it.
+</Note>
+
+## Stop a schedule
+
+To end a recurring schedule, you have a few options depending on what you want:
+
+- **Edit** the schedule and set an **end date** or a **stop after N occurrences**
+  limit so it winds down on its own.
+- **Delete** the schedule to remove it entirely. Deleting a schedule does not
+  remove transactions it already created.
+
+A schedule that has reached its end date or occurrence limit moves to the
+**Completed** group.
+
+## How this shows in Forecast
+
+The Forecast report projects your balances forward using your active schedules.
+Skipping an occurrence, editing an amount, or ending a schedule all change what
+Forecast expects — so keep your schedules current if you rely on the projection.
+
+## If something looks wrong
+
+- A schedule posted twice → check whether you also entered it manually after it
+  auto-posted; delete the duplicate transaction.
+- Forecast looks off → review your active schedules' amounts and cadences. See
+  [Forecast and debt](/reports/forecast-and-debt).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Create a schedule" icon="calendar-plus" href="/scheduled/create-a-schedule">
+    Set up a recurring bill or paycheck.
+  </Card>
+  <Card title="Forecast and debt" icon="chart-line" href="/reports/forecast-and-debt">
+    How schedules drive the projection.
+  </Card>
+  <Card title="Add, edit, delete" icon="pen" href="/transactions/add-edit-delete">
+    Manage the transactions a schedule creates.
+  </Card>
+  <Card title="Irregular income" icon="wave-square" href="/budgeting/irregular-income">
+    Budgeting around variable income.
+  </Card>
+</CardGroup>

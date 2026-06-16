@@ -1,0 +1,81 @@
+---
+title: "Duplicate or missing transactions"
+description: "Why a transaction appears twice or seems to vanish, and how to clean it up."
+---
+
+A transaction that looks doubled or missing almost always has a clear cause once
+you know where Budget Bandit gets its data. Here is how each case happens and how
+to fix it.
+
+## A transaction appears twice
+
+### You imported a file into a linked account
+
+The most common cause is mixing sources: a bank feed already pulled the
+transaction, and then you also imported a CSV or OFX/QFX file covering the same
+dates. Both sources created a row.
+
+**Fix:** delete the imported copy. Going forward, pick one source per account —
+either the live feed or file imports, not both. When you do import into an
+account that also has history, the importer's duplicate detection flags exact and
+likely matches; choose **Skip duplicates** so it does not re-add them. See
+<a href="/import/csv">Import a CSV</a>.
+
+### You entered it by hand, then it synced
+
+If you typed a transaction and the bank feed later delivered the same one, you
+have a manual row and a synced row.
+
+**Fix:** delete whichever copy you prefer to keep — they are independent rows.
+
+## A transaction is "missing"
+
+### It is in To Review
+
+Synced and imported transactions land **unapproved** in your
+<a href="/transactions/to-review">To Review</a> queue, not in the approved
+register list. Check there before assuming it is gone.
+
+### The bank has not posted it yet
+
+A purchase can take a day or two to post. Recent activity often shows as
+**pending** first. Budget Bandit shows what the bank has released, so a very
+recent charge may simply not be available yet. See
+<a href="/accounts/pending-vs-posted">Pending vs posted</a>.
+
+### A filter is hiding it
+
+If you are searching or filtering the transaction list, an active filter can hide
+the row. Clear filters and search again. See
+<a href="/transactions/flags-search-filter">Search and filter</a>.
+
+### The bank reversed it
+
+When a bank drops or reverses a transaction, the next sync **removes** the
+matching row to stay in step with the bank. A pending charge that never posts is
+a normal example.
+
+## How sync avoids doubling on its own
+
+For linked accounts, Budget Bandit does not blindly re-add what it already has.
+When a pending transaction posts, the existing pending row is **promoted in
+place** to posted rather than added a second time. Duplicates from a feed are
+the exception, not the rule — they usually trace back to a manual entry or a file
+import covering the same period.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Pending vs posted" icon="hourglass-half" href="/accounts/pending-vs-posted">
+    How a charge firms up over a day or two.
+  </Card>
+  <Card title="To Review" icon="inbox" href="/transactions/to-review">
+    Where synced and imported rows wait.
+  </Card>
+  <Card title="Why rows did not import" icon="circle-question" href="/import/why-rows-didnt-import">
+    Imports that skipped or dropped rows.
+  </Card>
+  <Card title="Add, edit, or delete" icon="pen" href="/transactions/add-edit-delete">
+    Remove a duplicate row.
+  </Card>
+</CardGroup>

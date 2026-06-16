@@ -1,0 +1,82 @@
+---
+title: "Reconcile an account"
+description: "Match Budget Bandit to your bank statement and lock in a cleared balance you can trust."
+---
+
+Reconciling is the check that proves your budget matches reality. You compare Budget
+Bandit's balance to your bank or statement, confirm the transactions that have posted, and
+lock them in. After reconciling, those transactions are sealed so an accidental edit can
+not quietly throw your balance off.
+
+Do this whenever you want to be sure an account is right — many people reconcile each time
+a statement closes, or every week or two.
+
+## Cleared vs reconciled
+
+A transaction moves through two states as you confirm it:
+
+- **Cleared** — you have seen it post at the bank and marked it cleared.
+- **Reconciled** — it was part of a reconciliation that matched your statement, and is now
+  locked. Reconciled transactions show a padlock.
+
+Reconciling is the step that turns a batch of cleared transactions into locked, reconciled
+ones tied to a statement balance.
+
+## Reconcile
+
+<Steps>
+  <Step title="Open the account">
+    From the Accounts sidebar, open the account you want to reconcile and start the
+    reconcile flow.
+  </Step>
+  <Step title="Enter the statement balance">
+    Type the ending balance from your bank statement or current online balance — the
+    number you are reconciling to.
+  </Step>
+  <Step title="Confirm the cleared transactions">
+    Mark every transaction that has posted as cleared. Budget Bandit adds up your cleared
+    transactions and compares the total to the statement balance you entered.
+  </Step>
+  <Step title="Check that the two balances agree">
+    When your cleared total equals the statement balance, you are reconciled. If they do
+    not match, see [Balance doesn't match](/reconciling/balance-doesnt-match).
+  </Step>
+  <Step title="Finish">
+    Budget Bandit locks the matched transactions to reconciled, stamps the account with the
+    reconcile date, and records the event. Your toast confirms how many were reconciled.
+  </Step>
+</Steps>
+
+<Note>
+  Reconciling never changes how your money is budgeted. It confirms which transactions are
+  real and locks them — it does not move money between categories.
+</Note>
+
+## Editing a reconciled transaction
+
+A reconciled transaction is locked on purpose. If you need to change one, open it and
+unlock it from the padlock — that returns it to cleared so you can edit. The original
+reconciliation record stays as history either way.
+
+## If something looks wrong
+
+If your cleared total will not match the statement no matter how you check the
+transactions, work through [Balance doesn't match](/reconciling/balance-doesnt-match) to
+find the discrepancy and, if needed, post a one-line balance adjustment.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Balance doesn't match" icon="scale-unbalanced" href="/reconciling/balance-doesnt-match">
+    Track down a discrepancy and adjust.
+  </Card>
+  <Card title="Cleared vs posted" icon="circle-check" href="/accounts/pending-vs-posted">
+    When a transaction is ready to clear.
+  </Card>
+  <Card title="Duplicate or missing transactions" icon="copy" href="/accounts/duplicate-or-missing-transactions">
+    A common cause of a mismatch.
+  </Card>
+  <Card title="Fix sync problems" icon="rotate" href="/accounts/fix-sync-problems">
+    When a linked bank is out of step.
+  </Card>
+</CardGroup>

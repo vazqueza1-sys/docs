@@ -1,0 +1,79 @@
+---
+title: "Fix sync problems"
+description: "A linked account that is not updating: how to force a sync, reconnect, and find where transactions went."
+---
+
+A linked account that has stopped showing new transactions usually has one of a
+few causes: the connection needs re-authentication, the bank has not posted the
+transactions yet, or new transactions are sitting in To Review waiting for you.
+Work through these in order.
+
+## 1. Force a sync
+
+<Steps>
+  <Step title="Open Connections">
+    Go to Settings, then Connections.
+  </Step>
+  <Step title="Sync now">
+    Choose **Sync now** next to the institution. The toast reports how many
+    transactions were added, updated, or removed. "Already up to date" means the
+    bank has nothing new yet.
+  </Step>
+</Steps>
+
+## 2. Check the connection status
+
+On the same page, look at the institution's badge:
+
+- **Reconnect required** or **Expiring soon** — the bank dropped or is about to
+  drop the session. Choose **Reconnect**. See
+  <a href="/accounts/reconnect-a-bank">Reconnect a bank</a>.
+- **Error** — the last sync failed. Reconnect, then sync again. If a reason is
+  shown beneath the institution name, it usually points at the fix.
+
+## 3. Look in To Review
+
+Synced transactions arrive **unapproved** in your
+<a href="/transactions/to-review">To Review</a> queue, not directly in the
+register's approved list. If a charge is "missing," check there first — it may
+have synced fine and simply be waiting for you to confirm it.
+
+## 4. Give the bank time
+
+Budget Bandit can only show what the bank has released. A purchase made today may
+not appear until the bank posts it, which can take a day or two. Recent activity
+often arrives as a **pending** transaction first and firms up later. See
+<a href="/accounts/pending-vs-posted">Pending vs posted</a>.
+
+## 5. Confirm the account is mapped
+
+If one account at a linked institution updates but another does not, the quiet
+account may not have been mapped to the feed during linking. Re-run the link from
+**Connect a bank** and attach the missing account to its existing record.
+
+## Still not syncing?
+
+- The bank works on its own website but not here: disconnect the institution and
+  link it fresh from <a href="/accounts/connect-a-bank">Connect a bank</a>.
+  Disconnecting preserves your accounts and existing transactions.
+- Transactions look doubled or some are missing:
+  <a href="/accounts/duplicate-or-missing-transactions">Duplicate or missing transactions</a>.
+- Nothing here helps: <a href="/troubleshooting/bank-sync">bank sync troubleshooting</a>
+  or <a href="/troubleshooting/contact-support">contact support</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Reconnect a bank" icon="rotate" href="/accounts/reconnect-a-bank">
+    Restore an expired or broken connection.
+  </Card>
+  <Card title="Pending vs posted" icon="hourglass-half" href="/accounts/pending-vs-posted">
+    Why a recent charge has not firmed up yet.
+  </Card>
+  <Card title="To Review" icon="inbox" href="/transactions/to-review">
+    Where synced transactions wait for confirmation.
+  </Card>
+  <Card title="Duplicate or missing transactions" icon="clone" href="/accounts/duplicate-or-missing-transactions">
+    Sort out doubles and gaps.
+  </Card>
+</CardGroup>

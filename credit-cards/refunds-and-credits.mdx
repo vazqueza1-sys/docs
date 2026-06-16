@@ -1,0 +1,66 @@
+---
+title: "Refunds and credits"
+description: "How refunds, returns, statement credits, and rewards behave on a credit card — and the difference between them."
+---
+
+Money coming back onto a credit card is not all the same. A refund for something you
+bought behaves differently from a reward or statement credit, and Budget Bandit handles
+each correctly as long as you categorize it the way it actually happened.
+
+## Refunds and returns
+
+A refund is the reverse of a purchase. Return $40 of groceries and the store credits the
+card $40.
+
+Categorize the refund to the **same category** you spent from — Groceries, in this case.
+Budget Bandit nets it against that month's spending in that category:
+
+- The category's Available rises back by the refund amount.
+- The amount reserved in the card's Payment category falls by the same amount, because
+  there is now less funded spending to pay.
+
+In short, a refund unwinds the original move cleanly. The category gets its money back and
+the card's safe-to-pay number adjusts down to match.
+
+<Note>
+  The key is matching the category. Categorize a grocery refund to Groceries, not to
+  income — otherwise it looks like new money instead of a reversal, and your category
+  spending will not net out.
+</Note>
+
+## Rewards and statement credits
+
+A cash-back reward, sign-up bonus, or statement credit is different — it is not reversing
+a specific purchase, it is the card issuer reducing your balance.
+
+Categorize it to your income or Ready to Assign, or leave it uncategorized. It lowers the
+balance you owe **without** changing your Payment category's safe-to-pay number. Because
+the balance drops while the reserved cash stays put, you end up with more set aside than
+you owe — a surplus.
+
+When the card has a surplus, you have cash reserved that the card no longer needs. You can
+move that money back to Ready to Assign and give it a new job elsewhere in the budget.
+
+## Quick reference
+
+| Money in | Categorize it as | Effect |
+| --- | --- | --- |
+| **Refund / return** | The original spending category | Reverses the purchase; category and safe-to-pay both adjust back |
+| **Reward / cash back / statement credit** | Income or Ready to Assign | Lowers the balance owed; creates a surplus you can reassign |
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="How credit cards work" icon="circle-info" href="/concepts/how-credit-cards-work">
+    The model that makes refunds net cleanly.
+  </Card>
+  <Card title="Payment category is short" icon="circle-exclamation" href="/credit-cards/payment-category-is-red">
+    The flip side: unfunded spending.
+  </Card>
+  <Card title="Categorize transactions" icon="tag" href="/transactions/categorize">
+    Put a refund in the right category.
+  </Card>
+  <Card title="Pay your card" icon="money-bill-transfer" href="/credit-cards/pay-your-card">
+    Record a payment as a transfer.
+  </Card>
+</CardGroup>

@@ -1,0 +1,102 @@
+---
+title: "Create a rule"
+description: "Build a rule that watches for conditions on a transaction and applies a category, payee, tag, or flag automatically."
+---
+
+A rule does the categorizing for you. You describe what to look for — a payee, an
+amount, a memo, an account — and what to do when a transaction matches. New
+transactions that fit run through your rules automatically.
+
+## Build a rule
+
+<Steps>
+  <Step title="Open Rules and start a new rule">
+    Go to **Rules** and create a new rule. You can also right-click a transaction
+    in the register and choose **Create Rule from This** to start with its details
+    filled in.
+  </Step>
+  <Step title="Name it">
+    Give the rule a clear name, like "Categorize Amazon purchases."
+  </Step>
+  <Step title="Choose how conditions combine">
+    Set **Match mode** to **All conditions** (every condition must be true) or
+    **Any condition** (one is enough).
+  </Step>
+  <Step title="Add conditions">
+    Add one or more conditions that describe the transaction (see below).
+  </Step>
+  <Step title="Add actions">
+    Add one or more actions to apply when the rule matches (see below).
+  </Step>
+  <Step title="Save">
+    Save the rule. It applies to new transactions going forward. To apply it to
+    existing transactions, see [Apply a rule retroactively](/rules/apply-retroactively).
+  </Step>
+</Steps>
+
+## Conditions
+
+A condition is a field, an operator, and a value. Available fields:
+
+| Field | Operators | Notes |
+| --- | --- | --- |
+| Payee | is, contains, matches regex | The payee name on the transaction |
+| Amount | equals, greater than, less than, at least, at most, between | Enter dollar amounts; **between** takes a min and max |
+| Account | is | A specific account |
+| Notes / Memo | contains, matches regex | Text in the transaction's memo |
+
+<Tip>
+  Start with **Payee contains** — it's the most common and most forgiving
+  condition. Reach for **matches regex** only when you need pattern matching that
+  plain "contains" can't express.
+</Tip>
+
+## Actions
+
+An action is what the rule does on a match. Available actions:
+
+| Action | What it does |
+| --- | --- |
+| Set Category | Assign a category to the transaction |
+| Set Payee | Rename the payee |
+| Add Tags | Add one or more [tags](/transactions/tags) (you can create a tag inline) |
+| Mark Cleared | Set the transaction to cleared |
+| Append to Notes | Add text to the memo |
+| Hide Transaction | Hide the transaction from views |
+| Auto-Split | Divide the transaction across categories by percentage |
+
+A rule can carry several actions — for example, set a category *and* add a tag.
+
+## Worked example
+
+To tag every charge over $100 from one account for review:
+
+- **Match mode:** All conditions
+- **Condition:** Account *is* "Checking"
+- **Condition:** Amount *greater than* $100
+- **Action:** Add Tags → "Review"
+- **Action:** Mark Cleared (optional)
+
+## If something looks wrong
+
+- The rule isn't firing → confirm it's enabled and its conditions actually match
+  (check the payee text and amount). See [Manage rules](/rules/manage-rules).
+- It fired on the wrong transactions → tighten the conditions, or switch match
+  mode from **Any** to **All**.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Apply retroactively" icon="clock-rotate-left" href="/rules/apply-retroactively">
+    Run a rule over transactions you already have.
+  </Card>
+  <Card title="Manage rules" icon="list-check" href="/rules/manage-rules">
+    Edit, reorder, pause, or delete rules.
+  </Card>
+  <Card title="Payees" icon="user-tag" href="/transactions/payees">
+    Default categories — the lighter alternative to a rule.
+  </Card>
+  <Card title="Tags" icon="tags" href="/transactions/tags">
+    The tags a rule can add automatically.
+  </Card>
+</CardGroup>

@@ -1,0 +1,69 @@
+---
+title: "Pending vs posted"
+description: "How a charge moves from pending to posted on a linked account, and why the two are not duplicates."
+---
+
+When you link a bank, transactions arrive in two stages: **pending** first, then
+**posted** once the bank settles them. Budget Bandit tracks both so your account
+balance reflects activity as it happens without double-counting.
+
+## Pending
+
+A pending transaction is one the bank has seen but not yet finalized. The amount
+or merchant can still change — a restaurant tab settles higher after a tip, a gas
+hold settles to the real fill amount. On a linked account, pending transactions
+come in **uncleared**.
+
+## Posted
+
+A posted transaction is settled. The amount is final. When a previously pending
+transaction posts, Budget Bandit **promotes the same row in place** — it updates
+the date, amount, and merchant and marks it **cleared**, rather than adding a
+second row. That is why you do not end up with a pending copy and a posted copy of
+the same purchase.
+
+<Note>
+  Because pending items can change, the final posted amount may differ from what
+  you first saw. The promoted row carries the bank's final numbers.
+</Note>
+
+## What this means for your budget
+
+- Pending transactions still affect the account's working balance, so what you
+  see reflects money already committed.
+- Imported and synced transactions, pending or posted, land in
+  <a href="/transactions/to-review">To Review</a> unapproved. Confirm and
+  categorize them there.
+- When you <a href="/reconciling/reconcile-an-account">reconcile</a>, you match
+  against **cleared** (posted) transactions, the same set your bank statement
+  shows.
+
+## Manual accounts
+
+Pending and posted are bank-feed concepts. On a manual account, you decide when a
+transaction is **cleared** by toggling its cleared status yourself. See
+<a href="/transactions/add-edit-delete">Add, edit, or delete</a>.
+
+## If a pending charge never posts
+
+Sometimes a hold is released and the charge never finalizes. On the next sync,
+Budget Bandit removes the row to match the bank. This is expected and is not a
+lost transaction. More on gaps and doubles:
+<a href="/accounts/duplicate-or-missing-transactions">Duplicate or missing transactions</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Connect a bank" icon="building-columns" href="/accounts/connect-a-bank">
+    Set up the feed that delivers pending and posted.
+  </Card>
+  <Card title="Reconcile an account" icon="scale-balanced" href="/reconciling/reconcile-an-account">
+    Match cleared transactions to a statement.
+  </Card>
+  <Card title="To Review" icon="inbox" href="/transactions/to-review">
+    Confirm synced transactions.
+  </Card>
+  <Card title="Fix sync problems" icon="wrench" href="/accounts/fix-sync-problems">
+    A linked account that is not updating.
+  </Card>
+</CardGroup>

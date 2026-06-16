@@ -1,0 +1,77 @@
+---
+title: "Import OFX or QFX"
+description: "Import a structured bank or Quicken file into an account — no column mapping, with duplicate detection built in."
+---
+
+OFX and QFX are structured bank export formats. Because the fields are already
+labeled, an OFX/QFX import needs no column mapping and no date-format picker —
+just pick the account and the file. Most US banks offer an OFX download, and
+Quicken exports `.qfx` files in the same family.
+
+<Warning>
+  An OFX/QFX import adds transactions to the account you select, inside your
+  current budget. It does **not** create a new budget and does **not** overwrite
+  your existing one. To migrate a whole budget, use
+  <a href="/import/from-ynab">YNAB</a>, <a href="/import/from-monarch">Monarch</a>,
+  or <a href="/import/from-actual">Actual</a>.
+</Warning>
+
+## Import a file
+
+<Steps>
+  <Step title="Open the OFX/QFX importer">
+    Go to Import, then **Import OFX / QFX**.
+  </Step>
+  <Step title="Pick the destination account">
+    Choose which account the transactions belong to. Existing transactions in
+    that account are preserved.
+  </Step>
+  <Step title="Choose the file">
+    Select a `.ofx` or `.qfx` file. Budget Bandit parses it in your browser and
+    may show a hint about the account type it detected (checking, savings, or
+    credit card).
+  </Step>
+  <Step title="Set duplicate handling and import">
+    Pick **Skip duplicates** (recommended), **Skip only exact matches (by
+    FITID)**, or **Import everything**, then import. You see a running count as
+    rows are added.
+  </Step>
+</Steps>
+
+## Amounts and dates
+
+OFX uses the same sign convention as Budget Bandit: positive amounts are money
+in, negative amounts are money out. You do not need to invert anything. Dates are
+read directly from the file's structured fields, so there is no format to
+choose.
+
+## Duplicate detection
+
+Every OFX transaction carries a **FITID**, a unique ID assigned by your bank.
+Budget Bandit uses it to spot exact repeats, and also checks for close matches
+within a few days. **Skip only exact matches (by FITID)** is the precise option
+when you re-download an overlapping statement; **Skip duplicates** also catches
+near matches.
+
+## After importing
+
+Imported transactions land in your <a href="/transactions/to-review">To Review</a>
+queue. Confirm and categorize them there. Any <a href="/rules/create-a-rule">rules</a>
+you have apply to matching rows.
+
+## If a file will not parse
+
+If Budget Bandit reports it is not an OFX file, confirm you downloaded the OFX or
+QFX option from your bank rather than a CSV or PDF. See
+<a href="/import/why-rows-didnt-import">Why rows did not import</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="CSV import" icon="table" href="/import/csv">
+    For files that need column mapping.
+  </Card>
+  <Card title="Import overview" icon="arrow-right-arrow-left" href="/import/overview">
+    All five importers and the new-budget rule.
+  </Card>
+</CardGroup>

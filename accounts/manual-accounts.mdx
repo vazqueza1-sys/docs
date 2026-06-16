@@ -1,0 +1,79 @@
+---
+title: "Add a manual account"
+description: "Add an account by hand with a starting balance when you do not want, or cannot use, a bank link."
+---
+
+A manual account works exactly like a linked one — it holds transactions, shows
+a balance, and feeds your budget. The only difference is you enter the
+transactions yourself instead of a bank feed doing it. Use a manual account for
+cash, a bank Plaid does not cover, or any account you prefer to track by hand.
+
+## Add the account
+
+<Steps>
+  <Step title="Open Accounts">
+    Go to Accounts and choose **Add Account**.
+  </Step>
+  <Step title="Name it and pick a type">
+    Give it a clear name, such as "Chase Checking," and choose the
+    <a href="/accounts/account-types">account type</a>. The type sets a sensible
+    default for whether the account is included in your budget.
+  </Step>
+  <Step title="Enter a starting balance">
+    Type the balance the account holds right now. Leave it blank or `0` to start
+    from nothing.
+  </Step>
+  <Step title="Create">
+    Choose **Create account**. The account appears in your sidebar with the
+    balance you entered.
+  </Step>
+</Steps>
+
+## How the starting balance is recorded
+
+The starting balance becomes a single transaction dated today, so the account's
+running balance matches what you entered. From there, every transaction you add
+moves the balance.
+
+<Info>
+  For a **credit card** or **loan**, enter what you owe. Budget Bandit records
+  that as a negative balance automatically — you do not need to type the minus
+  sign. A positive entry is flipped for you when you pick a debt type.
+</Info>
+
+A starting balance on a credit card is debt, not money to spend. It shows up as
+underfunded on that card's payment category until you assign dollars to it from
+the budget page. See <a href="/credit-cards/set-up-a-card">Set up a card</a>.
+
+## On-budget vs tracking
+
+The **Include in budget** checkbox decides whether the account's spending draws
+on your budget. Everyday accounts (checking, savings, cash, credit cards) are on
+budget by default. Loans and investments default to tracking-only — they count
+toward your <a href="/reports/net-worth">net worth</a> but do not pull from
+category balances. You can change this anytime from
+<a href="/accounts/edit-close-delete">Edit account</a>.
+
+## Want it to sync later?
+
+If your bank is on Plaid, you can attach a live feed to this manual account
+later. When you <a href="/accounts/connect-a-bank">connect the bank</a>, choose
+**attach to existing** for this account during mapping. Your hand-entered history
+stays and the feed takes over going forward.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Account types" icon="layer-group" href="/accounts/account-types">
+    Which type to pick and what each one does.
+  </Card>
+  <Card title="Add a transaction" icon="plus" href="/transactions/add-edit-delete">
+    Enter spending and income by hand.
+  </Card>
+  <Card title="Connect a bank" icon="building-columns" href="/accounts/connect-a-bank">
+    Link a feed instead of typing transactions.
+  </Card>
+  <Card title="Reconcile an account" icon="scale-balanced" href="/reconciling/reconcile-an-account">
+    Match the account to a statement and lock in a trusted balance.
+  </Card>
+</CardGroup>

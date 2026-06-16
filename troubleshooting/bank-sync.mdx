@@ -1,0 +1,87 @@
+---
+title: "Fix bank sync"
+description: "Fix a bank connection that won't link, stale balances, reconnecting a bank, and duplicate transactions."
+---
+
+Bank sync runs through Plaid. Most sync problems fall into one of four buckets: a connection
+that will not link, data that has gone stale, a bank that needs reconnecting, or duplicate
+transactions. Work through the one that matches.
+
+## A bank will not link
+
+<AccordionGroup>
+  <Accordion title="The connection fails partway through">
+    Plaid is connecting through your bank's own login. Close the window and try again — a fresh
+    attempt clears most one-off failures. Make sure you are entering credentials for the bank's
+    main online-banking login, not a card-only or rewards portal.
+  </Accordion>
+  <Accordion title="My bank asks for a code or extra verification">
+    Some banks require multi-factor verification during linking. Complete the prompt in the Plaid
+    window. If it times out, start the link again. See [Connect a bank](/accounts/connect-a-bank).
+  </Accordion>
+  <Accordion title="I can't find my bank in the list">
+    Not every institution is supported. See [Supported banks](/accounts/supported-banks). If yours
+    is not there, add the account manually and enter transactions or import a file from your bank.
+    See [Manual accounts](/accounts/manual-accounts).
+  </Accordion>
+</AccordionGroup>
+
+## Balances or transactions are stale
+
+If new transactions are not showing up, or a balance looks behind:
+
+<Steps>
+  <Step title="Give it time">
+    Banks post transactions on their own schedule. Pending transactions can take a day or two to
+    finalize before they sync reliably.
+  </Step>
+  <Step title="Check the connection status">
+    Open Settings, then Connections, to see whether the bank link is healthy or needs attention.
+  </Step>
+  <Step title="Reconnect if the bank needs it">
+    If the connection shows an error or asks you to sign in again, reconnect it — see below.
+  </Step>
+</Steps>
+
+## Reconnect a bank
+
+Banks periodically require you to sign in again to keep sharing data. When that happens, the
+connection is flagged and sync pauses until you reauthorize.
+
+<Steps>
+  <Step title="Open Settings, then Connections">
+    A flagged connection is marked as needing attention.
+  </Step>
+  <Step title="Reconnect the bank">
+    You are sent back through your bank's login to re-grant access. Sync resumes once it succeeds.
+  </Step>
+</Steps>
+
+See [Reconnect a bank](/accounts/reconnect-a-bank) for the full walkthrough.
+
+## Duplicate transactions
+
+If the same transaction shows up twice, it usually means a file import overlapped with synced
+data, or a transfer was entered on both sides. See
+[Duplicate or missing transactions](/accounts/duplicate-or-missing-transactions).
+
+<Note>
+  Pending versus posted matters here. A pending transaction can change amount or disappear before
+  it posts. See [Pending vs posted](/accounts/pending-vs-posted).
+</Note>
+
+## Still stuck
+
+If a connection keeps failing after reconnecting, reach us over
+[in-app chat](/troubleshooting/contact-support).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Reconnect a bank" icon="rotate" href="/accounts/reconnect-a-bank">
+    Reauthorize a flagged connection.
+  </Card>
+  <Card title="Duplicate or missing transactions" icon="copy" href="/accounts/duplicate-or-missing-transactions">
+    Clean up doubles and find missing rows.
+  </Card>
+</CardGroup>

@@ -1,0 +1,85 @@
+---
+title: "To Review"
+description: "Approve transactions imported from a linked bank, merge duplicates with your manual entries, or link a transfer pair."
+---
+
+**To Review** is the queue for transactions that arrived from a
+[linked bank](/accounts/connect-a-bank). Rather than dropping bank data straight
+into your register, Budget Bandit holds new imports here so you can approve them
+and resolve anything that looks like a duplicate or a transfer first.
+
+## What's in the queue
+
+Each card shows a transaction your bank sent — its date, amount, merchant, and
+account. Some cards also show a suggested match beside it:
+
+- **Possible duplicate** — a manual transaction you already entered that looks
+  like the same charge.
+- **Possible transfer** — the opposite side of the same money movement on another
+  linked account.
+
+A pending bank transaction is labeled **Pending** until it posts.
+
+## Approve a transaction
+
+For a plain import with no suggested match, choose **Approve**. The transaction
+joins your register on its account.
+
+To approve several at once, check them and use **Approve** at the top of the
+queue.
+
+## Resolve a possible duplicate
+
+When the queue thinks an import matches something you already entered, you get
+two choices:
+
+<Steps>
+  <Step title="Merge">
+    Keep your manual transaction and fold the bank's version into it. Use this
+    when they're the same charge — your categorization and notes stay, and you
+    avoid a double entry.
+  </Step>
+  <Step title="Keep both">
+    Treat them as two separate transactions. Use this when they only look alike
+    but really are different charges.
+  </Step>
+</Steps>
+
+## Resolve a possible transfer
+
+When two linked accounts show the two sides of one money movement, the queue
+offers:
+
+- **Mark as transfer** — link the pair into a single
+  [transfer](/transactions/transfers). Both sides leave the queue together.
+- **Not a transfer** — approve the transaction as a normal entry instead.
+
+## Categorizing happens in the register
+
+To Review is about confirming imports, not categorizing them. Once approved, a
+transaction lives in your register, where you can
+[categorize it](/transactions/categorize), flag it, or tag it. Set up a
+[rule](/rules/create-a-rule) so imports arrive already categorized.
+
+## If something looks wrong
+
+- The queue is empty but you expected imports → your bank may still be syncing.
+  See [Fix sync problems](/accounts/fix-sync-problems).
+- Duplicates keep slipping through → [Duplicate or missing transactions](/accounts/duplicate-or-missing-transactions).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Connect a bank" icon="building-columns" href="/accounts/connect-a-bank">
+    Link an account so transactions arrive here.
+  </Card>
+  <Card title="Transfers" icon="arrow-right-arrow-left" href="/transactions/transfers">
+    How linked transfer pairs work.
+  </Card>
+  <Card title="Categorize" icon="tag" href="/transactions/categorize">
+    Categorize a transaction after you approve it.
+  </Card>
+  <Card title="Create a rule" icon="wand-magic-sparkles" href="/rules/create-a-rule">
+    Categorize imports automatically.
+  </Card>
+</CardGroup>

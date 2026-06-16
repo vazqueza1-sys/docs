@@ -1,0 +1,87 @@
+---
+title: "Reconnect a bank"
+description: "Restore a broken or expired bank connection through Plaid's reconnect flow, including the MFA step-up."
+---
+
+Banks periodically require you to sign in again to keep a connection alive. When
+that happens, Budget Bandit stops receiving new transactions for that
+institution until you reconnect. Reconnecting reuses the existing link — it does
+not create new accounts or duplicate your history.
+
+## When you need to reconnect
+
+On Settings, then Connections, a linked institution shows one of these states:
+
+| Status | What it means | Action |
+| --- | --- | --- |
+| **Connected** | Healthy, syncing normally | None |
+| **Expiring soon** | The bank will require re-auth shortly | Reconnect when convenient |
+| **Reconnect required** | The bank dropped the session | Reconnect now |
+| **Error** | The last sync failed | Reconnect, then sync |
+
+When a state other than Connected appears, a **Reconnect** button shows next to
+the institution.
+
+## Reconnect
+
+<Steps>
+  <Step title="Open Connections">
+    Go to Settings, then Connections, and find the institution that needs
+    attention.
+  </Step>
+  <Step title="Choose Reconnect">
+    Select **Reconnect**. Budget Bandit opens the Plaid window pointed at your
+    existing connection.
+  </Step>
+  <Step title="Verify your identity if asked">
+    Reconnecting touches a linked bank, so it is a sensitive action. If you have
+    two-factor authentication on your account, Budget Bandit asks for your
+    authenticator code before continuing. Enter the code to proceed. See
+    <a href="/account/two-factor-authentication">Two-factor authentication</a>.
+  </Step>
+  <Step title="Sign in at your bank">
+    Complete your bank's sign-in or approval inside the Plaid window.
+  </Step>
+  <Step title="Done">
+    The institution flips back to **Connected**. Choose **Sync now** to pull any
+    transactions that accumulated while it was down.
+  </Step>
+</Steps>
+
+<Note>
+  Reconnecting keeps the same accounts and access. You will not be asked to map
+  accounts again, and no new accounts are created.
+</Note>
+
+## After reconnecting
+
+New transactions that arrived during the outage land in your
+<a href="/transactions/to-review">To Review</a> queue, unapproved. Pending items
+that posted while the feed was down are promoted in place rather than duplicated.
+See <a href="/accounts/pending-vs-posted">Pending vs posted</a>.
+
+## If reconnect does not stick
+
+- The bank window errors out: close it and try again — banks sometimes rate-limit
+  back-to-back attempts.
+- It immediately returns to **Reconnect required**: confirm your bank login works
+  on the bank's own website first, then retry.
+- Still stuck: <a href="/accounts/fix-sync-problems">Fix sync problems</a> or
+  <a href="/troubleshooting/contact-support">contact support</a>.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Connect a bank" icon="building-columns" href="/accounts/connect-a-bank">
+    Link an institution for the first time.
+  </Card>
+  <Card title="Fix sync problems" icon="wrench" href="/accounts/fix-sync-problems">
+    A connection that is healthy but stale.
+  </Card>
+  <Card title="Two-factor authentication" icon="shield-halved" href="/account/two-factor-authentication">
+    Set up the code Budget Bandit asks for on sensitive actions.
+  </Card>
+  <Card title="Bank sync troubleshooting" icon="life-ring" href="/troubleshooting/bank-sync">
+    Deeper diagnosis for stubborn connections.
+  </Card>
+</CardGroup>

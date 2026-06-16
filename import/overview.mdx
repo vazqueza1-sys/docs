@@ -1,0 +1,85 @@
+---
+title: "Import overview"
+description: "Five ways to bring data into Budget Bandit, and the one rule that governs all of them: every import creates a new budget or adds to an account, never overwrites."
+---
+
+Budget Bandit gives you five file importers plus live bank linking. Which one you
+want depends on where your data is coming from and whether you are moving a whole
+budget or just adding transactions to an account.
+
+<Warning>
+  **Every import creates a brand-new budget or adds to an existing account. An
+  import never overwrites or merges into a budget you already have.** The three
+  full-migration importers (YNAB, Monarch, Actual) each create a separate new
+  budget. CSV and OFX/QFX add transactions into an account you choose, inside the
+  budget you are already in. Either way, your existing budget is left untouched.
+</Warning>
+
+## Pick your path
+
+<CardGroup cols={2}>
+  <Card title="Coming from YNAB" icon="file-zipper" href="/import/from-ynab">
+    Brings accounts, categories, transactions, and your monthly assignments into
+    a new budget.
+  </Card>
+  <Card title="Coming from Monarch" icon="file-csv" href="/import/from-monarch">
+    Two CSV files become a new budget with accounts, categories, and
+    transactions.
+  </Card>
+  <Card title="Coming from Actual" icon="file-zipper" href="/import/from-actual">
+    Reads your Actual export and builds a new budget from it.
+  </Card>
+  <Card title="A CSV from your bank" icon="table" href="/import/csv">
+    Map columns and add transactions to an account you choose.
+  </Card>
+  <Card title="An OFX or QFX file" icon="file-code" href="/import/ofx-qfx">
+    A structured bank or Quicken file — no column mapping needed.
+  </Card>
+  <Card title="Link the bank instead" icon="building-columns" href="/accounts/connect-a-bank">
+    Skip files entirely and let transactions sync on their own.
+  </Card>
+</CardGroup>
+
+## Decision guide
+
+| You have | Use | What you get |
+| --- | --- | --- |
+| A full YNAB budget | <a href="/import/from-ynab">YNAB</a> | New budget: accounts, categories, transactions, assignments |
+| A Monarch account | <a href="/import/from-monarch">Monarch</a> | New budget: accounts, categories, transactions |
+| An Actual Budget file | <a href="/import/from-actual">Actual</a> | New budget: accounts, categories, transactions, assignments |
+| A bank CSV download | <a href="/import/csv">CSV</a> | Transactions added to one account |
+| A `.ofx` or `.qfx` file | <a href="/import/ofx-qfx">OFX/QFX</a> | Transactions added to one account |
+| A bank that Plaid covers | <a href="/accounts/connect-a-bank">Bank link</a> | Transactions sync automatically |
+
+## How the two kinds differ
+
+**Whole-budget migrations (YNAB, Monarch, Actual)** build a complete new budget so
+you can switch to Budget Bandit without losing structure. Because they always
+create a new budget, you can run them safely even if you have been experimenting
+already — nothing you have built is touched.
+
+**Transaction imports (CSV, OFX/QFX)** add rows to a single account you pick. They
+run duplicate detection so re-importing an overlapping file does not double your
+history. Use these to top up an account that is not on a bank feed.
+
+## After any import
+
+Imported transactions arrive in your <a href="/transactions/to-review">To Review</a>
+queue. Confirm and categorize them, and any <a href="/rules/create-a-rule">rules</a>
+you have set apply automatically to matching rows.
+
+## If rows do not come through
+
+See <a href="/import/why-rows-didnt-import">Why rows did not import</a> for skipped
+dates, bad amounts, and duplicate handling.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="CSV format reference" icon="list-check" href="/import/csv-format">
+    Exactly which columns and formats are expected.
+  </Card>
+  <Card title="Connect a bank" icon="building-columns" href="/accounts/connect-a-bank">
+    The no-file alternative.
+  </Card>
+</CardGroup>
