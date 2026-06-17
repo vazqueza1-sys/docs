@@ -27,6 +27,16 @@
       "dark": "#0a0a0b"
     }
   },
+  "seo": {
+    "indexing": "all",
+    "metatags": {
+      "og:site_name": "Budget Bandit Docs",
+      "og:type": "website",
+      "og:image": "/images/og-card.png",
+      "twitter:card": "summary_large_image",
+      "twitter:image": "/images/og-card.png"
+    }
+  },
   "navigation": {
     "groups": [
       {
