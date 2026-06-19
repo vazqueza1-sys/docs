@@ -11,7 +11,7 @@
   "logo": {
     "light": "/logo/seal.svg",
     "dark": "/logo/seal-inverted.svg",
-    "href": "https://budgetbandit.app"
+    "href": "https://budgetbandit.io"
   },
   "fonts": {
     "heading": {
@@ -222,13 +222,13 @@
     "primary": {
       "type": "button",
       "label": "Open the app",
-      "href": "https://budgetbandit.app"
+      "href": "https://budgetbandit.io"
     }
   },
   "footer": {
     "socials": {
       "x": "https://x.com/budgetbandit",
-      "website": "https://budgetbandit.app"
+      "website": "https://budgetbandit.io"
     }
   }
 }
